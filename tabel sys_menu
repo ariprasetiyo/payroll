@@ -1,0 +1,12 @@
+CREATE TABLE `sys_menu` (
+  `id` int(3) NOT NULL DEFAULT '0',
+  `nama_menu` varchar(255) NOT NULL,
+  `sub_link` int(10) NOT NULL,
+  `level_menu` int(1) NOT NULL,
+  `aktiv` int(1) NOT NULL,
+  `level_user` int(1) NOT NULL,
+  `href` varchar(255) DEFAULT NULL,
+  `menu_by_asc` varchar(10) NOT NULL,
+  `tag` varchar(5) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1

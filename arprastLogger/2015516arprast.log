@@ -1,0 +1,561 @@
+18:05:27 arprast log error :
+com.ari.prasetiyo.sistem.tanggalSistem
+java.text.ParseException: Unparseable date: "2015-05-16"
+	at java.text.DateFormat.parse(DateFormat.java:366)
+	at com.ari.prasetiyo.sistem.tanggalSistem.tglUtil(tanggalSistem.java:398)
+	at com.ari.prasetiyo.dao.daoMasterPelamar.konversiResultSetDetil(daoMasterPelamar.java:316)
+	at com.ari.prasetiyo.dao.daoMasterPelamar.tampilDetilDataPelamar(daoMasterPelamar.java:294)
+	at com.ari.prasetiyo.payroll.masterPelamar.kirimDataAjaxViewDetail(masterPelamar.java:336)
+	at com.ari.prasetiyo.payroll.masterPelamar.detailAmbilDataPelamar(masterPelamar.java:163)
+	at com.ari.prasetiyo.payroll.masterPelamar.doGet(masterPelamar.java:54)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:617)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:717)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:290)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:233)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:191)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:102)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:109)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:298)
+	at org.apache.coyote.http11.Http11Processor.process(Http11Processor.java:857)
+	at org.apache.coyote.http11.Http11Protocol$Http11ConnectionHandler.process(Http11Protocol.java:588)
+	at org.apache.tomcat.util.net.JIoEndpoint$Worker.run(JIoEndpoint.java:489)
+	at java.lang.Thread.run(Thread.java:745)
+
+
+====================================
+18:05:29 arprast log error :
+com.ari.prasetiyo.sistem.tanggalSistem
+java.text.ParseException: Unparseable date: "2015-05-13"
+	at java.text.DateFormat.parse(DateFormat.java:366)
+	at com.ari.prasetiyo.sistem.tanggalSistem.tglUtil(tanggalSistem.java:398)
+	at com.ari.prasetiyo.dao.daoMasterPelamar.konversiResultSetDetil(daoMasterPelamar.java:316)
+	at com.ari.prasetiyo.dao.daoMasterPelamar.tampilDetilDataPelamar(daoMasterPelamar.java:294)
+	at com.ari.prasetiyo.payroll.masterPelamar.kirimDataAjaxViewDetail(masterPelamar.java:336)
+	at com.ari.prasetiyo.payroll.masterPelamar.detailAmbilDataPelamar(masterPelamar.java:163)
+	at com.ari.prasetiyo.payroll.masterPelamar.doGet(masterPelamar.java:54)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:617)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:717)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:290)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:233)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:191)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:102)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:109)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:298)
+	at org.apache.coyote.http11.Http11Processor.process(Http11Processor.java:857)
+	at org.apache.coyote.http11.Http11Protocol$Http11ConnectionHandler.process(Http11Protocol.java:588)
+	at org.apache.tomcat.util.net.JIoEndpoint$Worker.run(JIoEndpoint.java:489)
+	at java.lang.Thread.run(Thread.java:745)
+
+
+====================================
+18:05:44 arprast log error :
+com.ari.prasetiyo.sistem.tanggalSistem
+java.text.ParseException: Unparseable date: "2015-05-13"
+	at java.text.DateFormat.parse(DateFormat.java:366)
+	at com.ari.prasetiyo.sistem.tanggalSistem.tglUtil(tanggalSistem.java:398)
+	at com.ari.prasetiyo.dao.daoMasterPelamar.konversiResultSetDetil(daoMasterPelamar.java:316)
+	at com.ari.prasetiyo.dao.daoMasterPelamar.tampilDetilDataPelamar(daoMasterPelamar.java:294)
+	at com.ari.prasetiyo.payroll.masterPelamar.kirimDataAjaxViewDetail(masterPelamar.java:336)
+	at com.ari.prasetiyo.payroll.masterPelamar.detailAmbilDataPelamar(masterPelamar.java:163)
+	at com.ari.prasetiyo.payroll.masterPelamar.doGet(masterPelamar.java:54)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:617)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:717)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:290)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:233)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:191)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:102)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:109)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:298)
+	at org.apache.coyote.http11.Http11Processor.process(Http11Processor.java:857)
+	at org.apache.coyote.http11.Http11Protocol$Http11ConnectionHandler.process(Http11Protocol.java:588)
+	at org.apache.tomcat.util.net.JIoEndpoint$Worker.run(JIoEndpoint.java:489)
+	at java.lang.Thread.run(Thread.java:745)
+
+
+====================================
+18:05:45 arprast log error :
+com.ari.prasetiyo.sistem.tanggalSistem
+java.text.ParseException: Unparseable date: "2015-05-13"
+	at java.text.DateFormat.parse(DateFormat.java:366)
+	at com.ari.prasetiyo.sistem.tanggalSistem.tglUtil(tanggalSistem.java:398)
+	at com.ari.prasetiyo.dao.daoMasterPelamar.konversiResultSetDetil(daoMasterPelamar.java:316)
+	at com.ari.prasetiyo.dao.daoMasterPelamar.tampilDetilDataPelamar(daoMasterPelamar.java:294)
+	at com.ari.prasetiyo.payroll.masterPelamar.kirimDataAjaxViewDetail(masterPelamar.java:336)
+	at com.ari.prasetiyo.payroll.masterPelamar.detailAmbilDataPelamar(masterPelamar.java:163)
+	at com.ari.prasetiyo.payroll.masterPelamar.doGet(masterPelamar.java:54)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:617)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:717)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:290)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:233)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:191)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:102)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:109)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:298)
+	at org.apache.coyote.http11.Http11Processor.process(Http11Processor.java:857)
+	at org.apache.coyote.http11.Http11Protocol$Http11ConnectionHandler.process(Http11Protocol.java:588)
+	at org.apache.tomcat.util.net.JIoEndpoint$Worker.run(JIoEndpoint.java:489)
+	at java.lang.Thread.run(Thread.java:745)
+
+
+====================================
+18:05:46 arprast log error :
+com.ari.prasetiyo.sistem.tanggalSistem
+java.text.ParseException: Unparseable date: "2015-05-13"
+	at java.text.DateFormat.parse(DateFormat.java:366)
+	at com.ari.prasetiyo.sistem.tanggalSistem.tglUtil(tanggalSistem.java:398)
+	at com.ari.prasetiyo.dao.daoMasterPelamar.konversiResultSetDetil(daoMasterPelamar.java:316)
+	at com.ari.prasetiyo.dao.daoMasterPelamar.tampilDetilDataPelamar(daoMasterPelamar.java:294)
+	at com.ari.prasetiyo.payroll.masterPelamar.kirimDataAjaxViewDetail(masterPelamar.java:336)
+	at com.ari.prasetiyo.payroll.masterPelamar.detailAmbilDataPelamar(masterPelamar.java:163)
+	at com.ari.prasetiyo.payroll.masterPelamar.doGet(masterPelamar.java:54)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:617)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:717)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:290)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:233)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:191)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:102)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:109)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:298)
+	at org.apache.coyote.http11.Http11Processor.process(Http11Processor.java:857)
+	at org.apache.coyote.http11.Http11Protocol$Http11ConnectionHandler.process(Http11Protocol.java:588)
+	at org.apache.tomcat.util.net.JIoEndpoint$Worker.run(JIoEndpoint.java:489)
+	at java.lang.Thread.run(Thread.java:745)
+
+
+====================================
+18:05:47 arprast log error :
+com.ari.prasetiyo.sistem.tanggalSistem
+java.text.ParseException: Unparseable date: "2015-05-13"
+	at java.text.DateFormat.parse(DateFormat.java:366)
+	at com.ari.prasetiyo.sistem.tanggalSistem.tglUtil(tanggalSistem.java:398)
+	at com.ari.prasetiyo.dao.daoMasterPelamar.konversiResultSetDetil(daoMasterPelamar.java:316)
+	at com.ari.prasetiyo.dao.daoMasterPelamar.tampilDetilDataPelamar(daoMasterPelamar.java:294)
+	at com.ari.prasetiyo.payroll.masterPelamar.kirimDataAjaxViewDetail(masterPelamar.java:336)
+	at com.ari.prasetiyo.payroll.masterPelamar.detailAmbilDataPelamar(masterPelamar.java:163)
+	at com.ari.prasetiyo.payroll.masterPelamar.doGet(masterPelamar.java:54)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:617)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:717)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:290)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:233)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:191)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:102)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:109)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:298)
+	at org.apache.coyote.http11.Http11Processor.process(Http11Processor.java:857)
+	at org.apache.coyote.http11.Http11Protocol$Http11ConnectionHandler.process(Http11Protocol.java:588)
+	at org.apache.tomcat.util.net.JIoEndpoint$Worker.run(JIoEndpoint.java:489)
+	at java.lang.Thread.run(Thread.java:745)
+
+
+====================================
+18:05:48 arprast log error :
+com.ari.prasetiyo.sistem.tanggalSistem
+java.text.ParseException: Unparseable date: "2015-05-13"
+	at java.text.DateFormat.parse(DateFormat.java:366)
+	at com.ari.prasetiyo.sistem.tanggalSistem.tglUtil(tanggalSistem.java:398)
+	at com.ari.prasetiyo.dao.daoMasterPelamar.konversiResultSetDetil(daoMasterPelamar.java:316)
+	at com.ari.prasetiyo.dao.daoMasterPelamar.tampilDetilDataPelamar(daoMasterPelamar.java:294)
+	at com.ari.prasetiyo.payroll.masterPelamar.kirimDataAjaxViewDetail(masterPelamar.java:336)
+	at com.ari.prasetiyo.payroll.masterPelamar.detailAmbilDataPelamar(masterPelamar.java:163)
+	at com.ari.prasetiyo.payroll.masterPelamar.doGet(masterPelamar.java:54)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:617)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:717)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:290)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:233)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:191)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:102)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:109)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:298)
+	at org.apache.coyote.http11.Http11Processor.process(Http11Processor.java:857)
+	at org.apache.coyote.http11.Http11Protocol$Http11ConnectionHandler.process(Http11Protocol.java:588)
+	at org.apache.tomcat.util.net.JIoEndpoint$Worker.run(JIoEndpoint.java:489)
+	at java.lang.Thread.run(Thread.java:745)
+
+
+====================================
+18:05:49 arprast log error :
+com.ari.prasetiyo.sistem.tanggalSistem
+java.text.ParseException: Unparseable date: "2015-05-13"
+	at java.text.DateFormat.parse(DateFormat.java:366)
+	at com.ari.prasetiyo.sistem.tanggalSistem.tglUtil(tanggalSistem.java:398)
+	at com.ari.prasetiyo.dao.daoMasterPelamar.konversiResultSetDetil(daoMasterPelamar.java:316)
+	at com.ari.prasetiyo.dao.daoMasterPelamar.tampilDetilDataPelamar(daoMasterPelamar.java:294)
+	at com.ari.prasetiyo.payroll.masterPelamar.kirimDataAjaxViewDetail(masterPelamar.java:336)
+	at com.ari.prasetiyo.payroll.masterPelamar.detailAmbilDataPelamar(masterPelamar.java:163)
+	at com.ari.prasetiyo.payroll.masterPelamar.doGet(masterPelamar.java:54)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:617)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:717)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:290)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:233)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:191)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:102)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:109)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:298)
+	at org.apache.coyote.http11.Http11Processor.process(Http11Processor.java:857)
+	at org.apache.coyote.http11.Http11Protocol$Http11ConnectionHandler.process(Http11Protocol.java:588)
+	at org.apache.tomcat.util.net.JIoEndpoint$Worker.run(JIoEndpoint.java:489)
+	at java.lang.Thread.run(Thread.java:745)
+
+
+====================================
+18:05:50 arprast log error :
+com.ari.prasetiyo.sistem.tanggalSistem
+java.text.ParseException: Unparseable date: "2015-05-16"
+	at java.text.DateFormat.parse(DateFormat.java:366)
+	at com.ari.prasetiyo.sistem.tanggalSistem.tglUtil(tanggalSistem.java:398)
+	at com.ari.prasetiyo.dao.daoMasterPelamar.konversiResultSetDetil(daoMasterPelamar.java:316)
+	at com.ari.prasetiyo.dao.daoMasterPelamar.tampilDetilDataPelamar(daoMasterPelamar.java:294)
+	at com.ari.prasetiyo.payroll.masterPelamar.kirimDataAjaxViewDetail(masterPelamar.java:336)
+	at com.ari.prasetiyo.payroll.masterPelamar.detailAmbilDataPelamar(masterPelamar.java:163)
+	at com.ari.prasetiyo.payroll.masterPelamar.doGet(masterPelamar.java:54)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:617)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:717)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:290)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:233)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:191)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:102)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:109)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:298)
+	at org.apache.coyote.http11.Http11Processor.process(Http11Processor.java:857)
+	at org.apache.coyote.http11.Http11Protocol$Http11ConnectionHandler.process(Http11Protocol.java:588)
+	at org.apache.tomcat.util.net.JIoEndpoint$Worker.run(JIoEndpoint.java:489)
+	at java.lang.Thread.run(Thread.java:745)
+
+
+====================================
+18:05:51 arprast log error :
+com.ari.prasetiyo.sistem.tanggalSistem
+java.text.ParseException: Unparseable date: "2015-05-16"
+	at java.text.DateFormat.parse(DateFormat.java:366)
+	at com.ari.prasetiyo.sistem.tanggalSistem.tglUtil(tanggalSistem.java:398)
+	at com.ari.prasetiyo.dao.daoMasterPelamar.konversiResultSetDetil(daoMasterPelamar.java:316)
+	at com.ari.prasetiyo.dao.daoMasterPelamar.tampilDetilDataPelamar(daoMasterPelamar.java:294)
+	at com.ari.prasetiyo.payroll.masterPelamar.kirimDataAjaxViewDetail(masterPelamar.java:336)
+	at com.ari.prasetiyo.payroll.masterPelamar.detailAmbilDataPelamar(masterPelamar.java:163)
+	at com.ari.prasetiyo.payroll.masterPelamar.doGet(masterPelamar.java:54)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:617)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:717)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:290)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:233)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:191)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:102)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:109)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:298)
+	at org.apache.coyote.http11.Http11Processor.process(Http11Processor.java:857)
+	at org.apache.coyote.http11.Http11Protocol$Http11ConnectionHandler.process(Http11Protocol.java:588)
+	at org.apache.tomcat.util.net.JIoEndpoint$Worker.run(JIoEndpoint.java:489)
+	at java.lang.Thread.run(Thread.java:745)
+
+
+====================================
+18:05:52 arprast log error :
+com.ari.prasetiyo.sistem.tanggalSistem
+java.text.ParseException: Unparseable date: "2015-05-16"
+	at java.text.DateFormat.parse(DateFormat.java:366)
+	at com.ari.prasetiyo.sistem.tanggalSistem.tglUtil(tanggalSistem.java:398)
+	at com.ari.prasetiyo.dao.daoMasterPelamar.konversiResultSetDetil(daoMasterPelamar.java:316)
+	at com.ari.prasetiyo.dao.daoMasterPelamar.tampilDetilDataPelamar(daoMasterPelamar.java:294)
+	at com.ari.prasetiyo.payroll.masterPelamar.kirimDataAjaxViewDetail(masterPelamar.java:336)
+	at com.ari.prasetiyo.payroll.masterPelamar.detailAmbilDataPelamar(masterPelamar.java:163)
+	at com.ari.prasetiyo.payroll.masterPelamar.doGet(masterPelamar.java:54)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:617)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:717)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:290)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:233)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:191)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:102)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:109)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:298)
+	at org.apache.coyote.http11.Http11Processor.process(Http11Processor.java:857)
+	at org.apache.coyote.http11.Http11Protocol$Http11ConnectionHandler.process(Http11Protocol.java:588)
+	at org.apache.tomcat.util.net.JIoEndpoint$Worker.run(JIoEndpoint.java:489)
+	at java.lang.Thread.run(Thread.java:745)
+
+
+====================================
+18:05:53 arprast log error :
+com.ari.prasetiyo.sistem.tanggalSistem
+java.text.ParseException: Unparseable date: "2015-05-16"
+	at java.text.DateFormat.parse(DateFormat.java:366)
+	at com.ari.prasetiyo.sistem.tanggalSistem.tglUtil(tanggalSistem.java:398)
+	at com.ari.prasetiyo.dao.daoMasterPelamar.konversiResultSetDetil(daoMasterPelamar.java:316)
+	at com.ari.prasetiyo.dao.daoMasterPelamar.tampilDetilDataPelamar(daoMasterPelamar.java:294)
+	at com.ari.prasetiyo.payroll.masterPelamar.kirimDataAjaxViewDetail(masterPelamar.java:336)
+	at com.ari.prasetiyo.payroll.masterPelamar.detailAmbilDataPelamar(masterPelamar.java:163)
+	at com.ari.prasetiyo.payroll.masterPelamar.doGet(masterPelamar.java:54)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:617)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:717)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:290)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:233)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:191)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:102)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:109)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:298)
+	at org.apache.coyote.http11.Http11Processor.process(Http11Processor.java:857)
+	at org.apache.coyote.http11.Http11Protocol$Http11ConnectionHandler.process(Http11Protocol.java:588)
+	at org.apache.tomcat.util.net.JIoEndpoint$Worker.run(JIoEndpoint.java:489)
+	at java.lang.Thread.run(Thread.java:745)
+
+
+====================================
+18:05:54 arprast log error :
+com.ari.prasetiyo.sistem.tanggalSistem
+java.text.ParseException: Unparseable date: "2015-05-16"
+	at java.text.DateFormat.parse(DateFormat.java:366)
+	at com.ari.prasetiyo.sistem.tanggalSistem.tglUtil(tanggalSistem.java:398)
+	at com.ari.prasetiyo.dao.daoMasterPelamar.konversiResultSetDetil(daoMasterPelamar.java:316)
+	at com.ari.prasetiyo.dao.daoMasterPelamar.tampilDetilDataPelamar(daoMasterPelamar.java:294)
+	at com.ari.prasetiyo.payroll.masterPelamar.kirimDataAjaxViewDetail(masterPelamar.java:336)
+	at com.ari.prasetiyo.payroll.masterPelamar.detailAmbilDataPelamar(masterPelamar.java:163)
+	at com.ari.prasetiyo.payroll.masterPelamar.doGet(masterPelamar.java:54)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:617)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:717)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:290)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:233)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:191)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:102)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:109)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:298)
+	at org.apache.coyote.http11.Http11Processor.process(Http11Processor.java:857)
+	at org.apache.coyote.http11.Http11Protocol$Http11ConnectionHandler.process(Http11Protocol.java:588)
+	at org.apache.tomcat.util.net.JIoEndpoint$Worker.run(JIoEndpoint.java:489)
+	at java.lang.Thread.run(Thread.java:745)
+
+
+====================================
+18:05:54 arprast log error :
+com.ari.prasetiyo.sistem.tanggalSistem
+java.text.ParseException: Unparseable date: "2015-05-16"
+	at java.text.DateFormat.parse(DateFormat.java:366)
+	at com.ari.prasetiyo.sistem.tanggalSistem.tglUtil(tanggalSistem.java:398)
+	at com.ari.prasetiyo.dao.daoMasterPelamar.konversiResultSetDetil(daoMasterPelamar.java:316)
+	at com.ari.prasetiyo.dao.daoMasterPelamar.tampilDetilDataPelamar(daoMasterPelamar.java:294)
+	at com.ari.prasetiyo.payroll.masterPelamar.kirimDataAjaxViewDetail(masterPelamar.java:336)
+	at com.ari.prasetiyo.payroll.masterPelamar.detailAmbilDataPelamar(masterPelamar.java:163)
+	at com.ari.prasetiyo.payroll.masterPelamar.doGet(masterPelamar.java:54)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:617)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:717)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:290)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:233)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:191)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:102)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:109)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:298)
+	at org.apache.coyote.http11.Http11Processor.process(Http11Processor.java:857)
+	at org.apache.coyote.http11.Http11Protocol$Http11ConnectionHandler.process(Http11Protocol.java:588)
+	at org.apache.tomcat.util.net.JIoEndpoint$Worker.run(JIoEndpoint.java:489)
+	at java.lang.Thread.run(Thread.java:745)
+
+
+====================================
+18:05:54 arprast log error :
+com.ari.prasetiyo.sistem.tanggalSistem
+java.text.ParseException: Unparseable date: "2015-05-16"
+	at java.text.DateFormat.parse(DateFormat.java:366)
+	at com.ari.prasetiyo.sistem.tanggalSistem.tglUtil(tanggalSistem.java:398)
+	at com.ari.prasetiyo.dao.daoMasterPelamar.konversiResultSetDetil(daoMasterPelamar.java:316)
+	at com.ari.prasetiyo.dao.daoMasterPelamar.tampilDetilDataPelamar(daoMasterPelamar.java:294)
+	at com.ari.prasetiyo.payroll.masterPelamar.kirimDataAjaxViewDetail(masterPelamar.java:336)
+	at com.ari.prasetiyo.payroll.masterPelamar.detailAmbilDataPelamar(masterPelamar.java:163)
+	at com.ari.prasetiyo.payroll.masterPelamar.doGet(masterPelamar.java:54)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:617)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:717)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:290)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:233)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:191)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:102)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:109)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:298)
+	at org.apache.coyote.http11.Http11Processor.process(Http11Processor.java:857)
+	at org.apache.coyote.http11.Http11Protocol$Http11ConnectionHandler.process(Http11Protocol.java:588)
+	at org.apache.tomcat.util.net.JIoEndpoint$Worker.run(JIoEndpoint.java:489)
+	at java.lang.Thread.run(Thread.java:745)
+
+
+====================================
+20:52:04 arprast log error :
+com.ari.prasetiyo.dao.daoMasterPelamar
+com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry 'MP2015187' for key 'PRIMARY'
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:408)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+	at com.mysql.jdbc.Util.getInstance(Util.java:386)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:1041)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:4187)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:4119)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2570)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2731)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2815)
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:2155)
+	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:2458)
+	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:2375)
+	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:2359)
+	at com.ari.prasetiyo.dao.daoMasterPelamar.Simpan(daoMasterPelamar.java:72)
+	at com.ari.prasetiyo.payroll.masterPelamar.saveDataPelamar(masterPelamar.java:204)
+	at com.ari.prasetiyo.payroll.masterPelamar.doPost(masterPelamar.java:158)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:637)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:717)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:290)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:233)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:191)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:102)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:109)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:298)
+	at org.apache.coyote.http11.Http11Processor.process(Http11Processor.java:857)
+	at org.apache.coyote.http11.Http11Protocol$Http11ConnectionHandler.process(Http11Protocol.java:588)
+	at org.apache.tomcat.util.net.JIoEndpoint$Worker.run(JIoEndpoint.java:489)
+	at java.lang.Thread.run(Thread.java:745)
+
+
+====================================
+20:52:04 arprast log error :
+com.ari.prasetiyo.dao.daoMasterPelamar
+com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry 'MP2015187' for key 'PRIMARY'
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:408)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+	at com.mysql.jdbc.Util.getInstance(Util.java:386)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:1041)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:4187)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:4119)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2570)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2731)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2815)
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:2155)
+	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:2458)
+	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:2375)
+	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:2359)
+	at com.ari.prasetiyo.dao.daoMasterPelamar.Simpan(daoMasterPelamar.java:72)
+	at com.ari.prasetiyo.payroll.masterPelamar.saveDataPelamar(masterPelamar.java:204)
+	at com.ari.prasetiyo.payroll.masterPelamar.doPost(masterPelamar.java:158)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:637)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:717)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:290)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:233)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:191)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:102)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:109)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:298)
+	at org.apache.coyote.http11.Http11Processor.process(Http11Processor.java:857)
+	at org.apache.coyote.http11.Http11Protocol$Http11ConnectionHandler.process(Http11Protocol.java:588)
+	at org.apache.tomcat.util.net.JIoEndpoint$Worker.run(JIoEndpoint.java:489)
+	at java.lang.Thread.run(Thread.java:745)
+
+
+====================================
+20:52:04 arprast log error :
+com.ari.prasetiyo.dao.daoMasterPelamar
+com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry 'MP2015189' for key 'PRIMARY'
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:408)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+	at com.mysql.jdbc.Util.getInstance(Util.java:386)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:1041)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:4187)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:4119)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2570)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2731)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2815)
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:2155)
+	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:2458)
+	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:2375)
+	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:2359)
+	at com.ari.prasetiyo.dao.daoMasterPelamar.Simpan(daoMasterPelamar.java:72)
+	at com.ari.prasetiyo.payroll.masterPelamar.saveDataPelamar(masterPelamar.java:204)
+	at com.ari.prasetiyo.payroll.masterPelamar.doPost(masterPelamar.java:158)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:637)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:717)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:290)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:233)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:191)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:102)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:109)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:298)
+	at org.apache.coyote.http11.Http11Processor.process(Http11Processor.java:857)
+	at org.apache.coyote.http11.Http11Protocol$Http11ConnectionHandler.process(Http11Protocol.java:588)
+	at org.apache.tomcat.util.net.JIoEndpoint$Worker.run(JIoEndpoint.java:489)
+	at java.lang.Thread.run(Thread.java:745)
+
+
+====================================
+20:52:04 arprast log error :
+com.ari.prasetiyo.dao.daoMasterPelamar
+com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry 'MP2015189' for key 'PRIMARY'
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:408)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+	at com.mysql.jdbc.Util.getInstance(Util.java:386)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:1041)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:4187)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:4119)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2570)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2731)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2815)
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:2155)
+	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:2458)
+	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:2375)
+	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:2359)
+	at com.ari.prasetiyo.dao.daoMasterPelamar.Simpan(daoMasterPelamar.java:72)
+	at com.ari.prasetiyo.payroll.masterPelamar.saveDataPelamar(masterPelamar.java:204)
+	at com.ari.prasetiyo.payroll.masterPelamar.doPost(masterPelamar.java:158)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:637)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:717)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:290)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:233)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:191)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:102)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:109)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:298)
+	at org.apache.coyote.http11.Http11Processor.process(Http11Processor.java:857)
+	at org.apache.coyote.http11.Http11Protocol$Http11ConnectionHandler.process(Http11Protocol.java:588)
+	at org.apache.tomcat.util.net.JIoEndpoint$Worker.run(JIoEndpoint.java:489)
+	at java.lang.Thread.run(Thread.java:745)
+
+
+====================================

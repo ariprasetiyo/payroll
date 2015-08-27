@@ -1,0 +1,47 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Mar 15, 2015, 11:58:04 AM
+    Author     : arprast
+*/
+
+#sales-form .line-item-section .line-item-section-header {
+    position: relative;
+    width: 100%;
+    margin-bottom: 6px;
+    padding-bottom: 25px;
+    padding-top: 5px;
+    background-color: #eee;
+    border-top: none;
+    border-bottom: 1px solid #ccc;
+    height: 18px;
+    font-size: 12px;
+    color: #333;
+    border-bottom: 1px solid #DCDCDD;
+}
+
+select, textarea, input[type="text"], input[type="password"], input[type="datetime"], input[type="datetime-local"], input[type="date"], input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type="color"], .uneditable-input {
+    display: inline-block;
+    height: 25px;
+    padding: 4px 6px;
+    margin-bottom: 9px;
+    font-size: 13px;
+    line-height: 18px;
+    color: #555;
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border-radius: 0px;
+    vertical-align: middle;
+}
+
+#sales-form .payment-panel {
+    width: 160px;
+    padding: 4px 5px 4px 8px;
+    font-size: 13px;
+    background-color: #fafafa;
+}
+
+

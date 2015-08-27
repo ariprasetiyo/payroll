@@ -1,0 +1,14 @@
+CREATE TABLE `sys_user` (
+  `name` varchar(100) NOT NULL,
+  `username` varchar(200) NOT NULL,
+  `password` varchar(300) NOT NULL,
+  `join_at` date NOT NULL,
+  `expired` date NOT NULL,
+  `status_aktiv` int(1) NOT NULL,
+  `aktiv_date` date DEFAULT NULL,
+  `level_user` int(1) NOT NULL,
+  `count_false_login` int(1) NOT NULL,
+  `lastlogin` datetime NOT NULL,
+  `update` datetime NOT NULL,
+  PRIMARY KEY (`username`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1

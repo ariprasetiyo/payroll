@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+
+<head>
+<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+<link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.13.0/jquery.validate.min.js"></script>
+<script src="http://netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
+<title>bootstrap login validation demo</title>
+
+    <style type="text/css">
+    .labelfrm {
+    display:block;
+    font-size:small;
+    margin-top:5px;
+    } .error { font-size:small; color:red; }
+    </style>
+    </head>
+    <body>
+    <h1>Input Data Mahasiswa</h1>
+    <form action="proses.php" method="post" id="frm-mhs">
+    <label for="nim" class="labelfrm">NIM: </label>
+    <input type="text" name="nim"  maxlength="10" size="15"/>
+     
+    <label for="nama" class="labelfrm">NAMA: </label>
+    <input type="text" name="nama" id="nama" size="30"/>
+     
+    <label for="alamat" class="labelfrm">ALAMAT: </label>
+    <textarea name="alamat" id="alamat" cols="40" rows="4"></textarea>
+     
+    <label for="tgl" class="labelfrm">TANGGAL LAHIR: </label>
+    <input type="text" name="tgl" id="tgl" maxlength="10" size="15"/>
+     
+    <label for="umur" class="labelfrm">UMUR: </label>
+    <input type="text" name="umur" id="umur" maxlength="3" size="7"/>
+     
+    <label for="email" class="labelfrm">ALAMAT EMAIL: </label>
+    <input type="text" name="email" id="email" size="50"/>
+     
+    <label for="situs" class="labelfrm">ALAMAT SITUS: </label>
+    <input type="text" name="situs" id="situs" size="50"/>
+     
+    <label for="pass1" class="labelfrm">PASSWORD: </label>
+    <input type="password" name="pass1" id="pass1" size="15"/>
+     
+    <label for="pass2" class="labelfrm">ULANGI PASSWORD: </label>
+    <input type="password" name="pass2" id="pass2" size="15"/>
+     
+    <label for="submit" class="labelfrm">&nbsp;</label>
+    <input type="submit" name="Submit" value="Submit"/>
+    </form>
+
+    
+    <script type="text/javascript">
+$(document).ready(function() {
+	$("#frm-mhs").validate(
+                {
+                rules: {
+                        nim : {
+                            required: true,
+                            digits: true,
+                            minlength:10,
+                            maxlength:10
+                        },
+                        tgl: {
+                            indonesianDate:true
+                        },
+                        umur: {
+                            digits: true,
+                            range: [0, 100]
+                        },
+                        email: {
+                            email: true
+                        },
+                        situs: {
+                            url: true
+                        },
+                        pass2: {
+                            equalTo: "#pass1"
+                        }
+                },
+                messages: {
+                    nim: {
+                        required: "Kolom nim harus diisi",
+                        minlength: "Kolom nim harus terdiri dari 10 digit",
+                        maxlength: "Kolom nim harus terdiri dari 10 digit"
+                    },
+                    email: {
+                        required: "Alamat email harus diisi",
+                        email: "Format email tidak valid"
+                    },
+                    pass2: {
+                        equalTo: "Password tidak sama"
+                    }
+                }
+                
+        } );
+});
+</script>
+
+</body>
+</html>

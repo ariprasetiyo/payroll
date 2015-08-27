@@ -1,0 +1,751 @@
+/* Side Navigation */
+@media(min-width:768px) {
+    //original side-nav
+    .side-nav-left {
+        position: fixed;
+        top: 51px;
+        left: 225px;
+        //width: 150px;
+        margin-left: -225px;
+        border: medium none;
+        border-radius: 0px;
+        overflow-y: auto;
+        background-color: #222;
+    }
+
+    .side-nav-left>li>a {
+        width: 225px;
+    }
+
+    .side-nav-left li a:hover,
+    .side-nav-left li a:focus {
+        outline: none;
+        background-color: #000 !important;
+    }
+}
+
+
+.side-nav-left>li>ul {
+    padding: 0;
+}
+
+.side-nav-left>li>ul>li>a {
+    display: block;
+    padding: 10px 15px 10px 38px;
+    text-decoration: none;
+    color: #999;
+}
+
+.side-nav-left>li>ul>li>a:hover {
+    color: #fff;
+}
+
+/* div pada save, edit, print, delete */
+.fixedBottomDiv {
+    //height: 40px;
+    z-index: 999;
+    background-color: transparent;
+    text-align: center;
+    position: fixed;
+    bottom: 0px;
+    padding: 0px 0px 0px 1px;
+    width: 95%;
+}
+/* affix buat filter */
+.bag-filter-affix {
+    margin-bottom: 2%;
+}
+.affix {
+    position: fixed;
+    margin-top: -3%;
+    float: left;
+    width: 100%;
+    min-height: 1px;
+    padding-right: 5px;
+    padding-left: 0px;
+}
+.btn {
+    font-size: 90%;
+}
+/* 
+ari prasetiyo
+20-04-2015
+Scroll tabel
+*/
+
+.table-fixed thead {
+  width: 97%;
+}
+.table-fixed tbody {
+  height: 230px;
+  overflow-y: auto;
+  width: 100%;
+}
+.table-fixed thead, .table-fixed tbody, .table-fixed tr, .table-fixed td, .table-fixed th {
+  display: block;
+}
+.table-fixed tbody td, .table-fixed thead > tr> th {
+  float: left;
+  border-bottom-width: 0;
+
+  }
+/* 
+ari prasetiyo
+28-01-2015
+agar menu drop down 3 level berjalan
+*/
+
+.dropdown-submenu {
+    position: relative;
+}
+
+.dropdown-submenu>.dropdown-menu {
+    top: 0;
+    left: 100%;
+    margin-top: -6px;
+    margin-left: -1px;
+    -webkit-border-radius: 0 6px 6px 6px;
+    -moz-border-radius: 0 6px 6px;
+    border-radius: 0 6px 6px 6px;
+}
+
+.dropdown-submenu:hover>.dropdown-menu {
+    display: block;
+}
+
+.dropdown-submenu>a:after {
+    display: block;
+    content: " ";
+    float: right;
+    width: 0;
+    height: 0;
+    border-color: transparent;
+    border-style: solid;
+    border-width: 5px 0 5px 5px;
+    border-left-color: #ccc;
+    margin-top: 5px;
+    margin-right: -10px;
+}
+
+.dropdown-submenu:hover>a:after {
+    border-left-color: #fff;
+}
+
+.dropdown-submenu.pull-left {
+    float: none;
+}
+
+.dropdown-submenu.pull-left>.dropdown-menu {
+    left: -100%;
+    margin-left: 10px;
+    -webkit-border-radius: 6px 0 6px 6px;
+    -moz-border-radius: 6px 0 6px 6px;
+    border-radius: 6px 0 6px 6px;
+}
+
+/*
+page header pada sales_sale
+*/
+.page-header, .paling_atas{
+      padding-bottom: 1px;
+      margin: 0px 0 -5px 0px;
+      margin-left: -15px;
+      margin-right: -15px;
+      border-bottom: 0px solid #eee;
+}
+
+#page-wrapper {
+  padding: 0px;
+}
+
+h4, .h4, h5, .h5, h6, .h6 {
+  margin-top: 7px;
+  margin-bottom: 0px; 
+}
+.col-md-2 {
+  width: 11.66666667%;
+}
+
+/*
+Judul menu, ex sales. inventory
+*/
+.alert{
+  padding: 4px;
+  margin-bottom: 10px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+}
+
+.col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12, .col-lg-13{
+    position: relative;
+  min-height: 1px;
+  padding-right: 5px; 
+  padding-left: 0px; 
+}
+.container-fluid {
+  padding-right: 25px;
+  padding-left: 25px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+/*
+merubah tinggi select2
+*/
+/*
+.select2-container--default .select2-selection--multiple{
+    display: block;
+    height: 10px;
+    padding: 0 0 0 8px;
+    overflow: hidden;
+    position: relative;
+
+    border: 1px solid #aaa;
+    white-space: nowrap;
+    line-height: 17px;
+    color: #444;
+    
+    text-decoration: none;
+    border-radius: 4px;
+
+    background-clip: padding-box;
+
+    -webkit-touch-callout: none;
+      -webkit-user-select: none;
+       -khtml-user-select: none;
+         -moz-user-select: none;
+          -ms-user-select: none;
+              user-select: none;
+
+    background-color: #fff;
+    background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #eee), color-stop(0.5, #fff));
+    background-image: -webkit-linear-gradient(center bottom, #eee 0%, #fff 50%);
+    background-image: -moz-linear-gradient(center bottom, #eee 0%, #fff 50%);
+    background-image: -o-linear-gradient(bottom, #eee 0%, #fff 50%);
+    background-image: -ms-linear-gradient(top, #fff 0%, #eee 50%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr = '#ffffff', endColorstr = '#eeeeee', GradientType = 0);
+    background-image: linear-gradient(top, #fff 0%, #eee 50%);
+}
+*/
+
+body {
+    /*
+    main css
+    */
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 13px;
+  line-height: 1.42857143;
+  /* color: #333; */
+  background-color: #fff;
+}
+
+/*
+form input data
+*/
+.form-input-data-bottom-10{
+    margin-bottom: 5px
+}
+.table > tbody > tr > td, .table > tfoot > tr > td {
+  padding: 3px;
+  line-height: 1.42857143;
+  /* vertical-align: top; */
+   border-top: 0px solid #ddd; 
+}
+
+/*
+ validation jika error
+*/
+.error { 
+    font-size:small; 
+    color:#C02929; 
+}
+.padding_left_error {
+    outline: 0px none;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.075) inset, 0px 0px 8px rgba(239, 53, 13, 0.6);
+    border-color: #D41515;
+}
+
+/*
+input
+*/
+input {
+  display: block;
+  width: 10%;
+  height: 22px;
+  padding: 0px 6px;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #555;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #ccc;
+  border-radius: 0px;
+ // -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+  //box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+ // -webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
+  -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}
+input:focus {
+    border-color: #66AFE9;
+    outline: 0px none;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.075) inset, 0px 0px 8px rgba(102, 175, 233, 0.6);
+}
+.padding_left{
+    padding: 0px 6px;
+}
+select {
+  display: block;
+  width: 10%;
+  height: 22px;
+  //padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #555;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #ccc;
+  border-radius: 0px;
+ // -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+  //box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+ // -webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
+  -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}
+
+input[disabled], input[readonly] {
+  cursor: not-allowed;
+  background-color: #eee;
+  opacity: 1;
+}
+
+
+/*
+bagian sales
+*/
+.header-name {
+  position: absolute;
+}
+.line-item-section-body {
+  overflow-y: scroll;
+  overflow-x: hidden;
+  
+}
+.line-item-section-header {
+  position: relative;
+  width: 100%;
+  margin-bottom: 6px;
+  padding-bottom: 5px;
+  padding-top: 5px;
+  background-color: #eee;
+  border-top: none;
+  border-bottom: 1px solid #ccc;
+  height: 25px;
+  font-size: 12px;
+  color: #333;
+  border-bottom: 1px solid #DCDCDD;
+}
+.panel-heading {
+  padding: 5px 15px;
+  border-bottom: 1px solid transparent;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+}
+
+.transaksi_header_no{
+    width: 25px;
+    
+}
+.transaksi_header_item{
+      margin-left: 10px;
+}
+.transaksi_header_qty{
+      margin-left: 2px;
+      width: 25px;
+}
+.transaksi_header_discount{
+      margin-left: 5px;
+      width: 100px;
+}
+.transaksi_header_price{
+      margin-left: 0px;
+      width: 100px;
+}
+.transaksi_header_amount{
+      margin-left: 0px;
+      
+}
+
+.transaksi_no{
+    width: 25px;
+    
+}
+.transaksi_item{
+      margin-left: 0px;
+      
+}
+.text_input_width_100_persen{
+        width: 100%;
+ }
+
+.transaksi_qty{
+      margin-left: 2px;
+      width: 25px;
+}
+.transaksi_discount{
+      margin-left: 5px;
+      width: 100px;
+}
+.transaksi_price{
+      margin-left: 0px;
+      width: 100px;
+}
+.transaksi_amount{
+      margin-left: 0px;
+      width: 125px;
+}
+.select2-container--default {
+  width: 400px;
+}
+
+/*
+text editor
+*/
+ #editor {overflow:scroll; max-height:300px; }
+ 
+ /*
+ tab 
+ */
+ .panel-body {
+    padding: 5px 10px;
+}
+ 
+/*
+CSS pada tombol CRUD
+*/
+.panel-body-ari-customize {
+  padding: 0px;
+}
+.panel-heading-ari{
+    padding: 5px 15px;
+    border-bottom: 1px solid transparent;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+}
+.panel-default > .panel-heading-ari {
+    color: #333;
+    background-color: #D9EDF7;
+    border-color: #DDD;
+}
+.panel-default-ari {
+    border-color: #DDD;
+}
+.panel-ari {
+    margin-bottom: -16px;
+    background-color: #FFF;
+    border: 0px solid transparent;
+    border-radius: 4px;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.05);
+}
+button, html input[type="button"], input[type="reset"], input[type="submit"] {
+    cursor: pointer;
+    padding: 0px 12px;
+}
+input {
+    padding: 0px 12px;
+}
+.btn {
+    padding: 0px 12px;
+}
+.modal-dialog-ari-input {
+    width: 500px;
+    margin: 20px auto;
+  }
+.form-horizontal .control-label {
+    padding-top: 2px;
+    margin-bottom: 0px;
+    text-align: right;
+}
+.form-group2 {
+    padding-bottom: 25px;
+}
+.form-horizontal .radio, .form-horizontal .checkbox, .form-horizontal .radio-inline, .form-horizontal .checkbox-inline {
+    padding-top: 0px;
+}
+
+/* hape */
+@media (min-width: 200px) and (max-width: 549px) {
+    
+    .line-item-section-body {
+        overflow-y: scroll;
+        overflow-x: hidden;
+    }
+    /* option status pelamar */
+    .f_s_plmr{
+        width: 100%;
+    }
+    /* div pada save, edit, print, delete */
+    .fixedBottomDiv {
+        display: block;
+        position:relative;
+        left: 0%;
+        width: 100%;
+    }
+    label {
+        display: inline-block;
+        max-width: 100%;
+        margin-bottom: 0px;
+        font-weight: bold;
+      }
+    .page-header, .paling_atas{
+      padding-bottom: 0px;
+      margin: 10px 0 0px;
+      margin-left: -15px;
+      margin-right: -15px;
+      margin-top: -50px;
+      border-bottom: 0px solid #eee;
+    }
+    body {
+    /*
+    main css
+    */
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 11px;
+    line-height: 1.42857143;
+    /* color: #333; */
+    background-color: #fff;
+  }
+  .line-item-section-header {
+  
+        font-size: 11px;
+    }
+    
+   /*
+    sales
+    */
+    .transaksi_header_item {
+        margin-left: 10px;
+        width: 70px;
+      }
+    .transaksi_header_price {
+        margin-left: 10px;
+        width: 50px;
+      }
+    .transaksi_header_qty {
+        margin-left: 2px;
+        width: 0px;
+      }
+      .transaksi_header_discount {
+        margin-left: 0px;
+        width: 50px;
+      }
+    .transaksi_header_amount {
+        margin-left: 2px;
+        width: 68px;
+     }
+    .transaksi_price {
+        margin-left: 0px;
+        width: 50px;
+      }
+  .transaksi_discount {
+        margin-left: 5px;
+        width: 50px;
+      }
+
+    .transaksi_amount {
+        margin-left: 0px;
+        width: 50px;
+      }
+      .affix {
+        position: static;
+    }
+}
+/* tampilan seperti hp */
+@media (min-width: 550px) and (max-width: 800px) {
+    .affix {
+        position: static;
+    }
+    .line-item-section-body {
+        overflow-y: scroll;
+        overflow-x: hidden;
+    }
+    /* option status pelamar */
+    .f_s_plmr{
+        width: 100%;
+    }
+    .fixedBottomDiv {
+        display: block;
+        position:relative;
+        left: 0%;
+        width: 100%;
+    }
+    .page-header, .paling_atas{
+      padding-bottom: 0px;
+      margin: 60px 0 5px;
+      margin-left: -15px;
+      margin-right: -15px;
+      margin-top: -50px;
+      border-bottom: 0px solid #eee;
+    }
+    .transaksi_header_discount {
+        margin-left: 5px;
+        width: 70px;
+      }
+      .transaksi_header_amount {
+        margin-left: 0px;
+        width: 80px;
+      }
+    .transaksi_discount {
+    margin-left: 5px;
+    width: 100px;
+  }
+  .transaksi_price {
+    margin-left: 0px;
+    width: 80px;
+  }
+    .transaksi_amount {
+    margin-left: 0px;
+    width: 75px;
+  }
+  
+}
+@media (min-width: 800px) and (max-width: 991px) {
+    .line-item-section-body {
+        overflow-y: scroll;
+        overflow-x: hidden;
+        height:450px;
+    }
+    .fixedBottomDiv {
+        display: block;
+        position:relative;
+        left: 0%;
+        width: 100%;
+    }
+    .page-header, .paling_atas{
+      padding-bottom: 0px;
+      margin: 60px 0 5px;
+      margin-left: -15px;
+      margin-right: -15px;
+      margin-top: 0px;
+      border-bottom: 0px solid #eee;
+    }
+    .transaksi_header_discount {
+        margin-left: 5px;
+        width: 70px;
+      }
+      .transaksi_header_amount {
+        margin-left: 0px;
+        width: 80px;
+      }
+    .transaksi_discount {
+    margin-left: 5px;
+    width: 100px;
+  }
+  .transaksi_price {
+    margin-left: 0px;
+    width: 80px;
+  }
+    .transaksi_amount {
+    margin-left: 0px;
+    width: 75px;
+  }
+  .transaksi_header_amount {
+    margin-left: 20px;
+    width: 75px;
+  }
+  
+}
+
+/*
+monitor kecil, laptop
+*/
+@media (min-width: 992px) and (max-width: 1200px) {
+    .line-item-section-body {
+        overflow-y: scroll;
+        overflow-x: hidden;
+    }
+    .fixedBottomDiv {
+        display: block;
+        position:relative;
+        left: 0%;
+        width: 100%;
+    }
+    .col-md-2 {
+      width: 18.66666667%;
+    }
+    .col-md-4 {
+    width: 47.33333333%;
+    }
+    .col-md-1 {
+    width: 12.33333333%;
+  }
+ 
+   .transaksi_header_amount {
+    margin-left: 20px;
+    width: 100px;
+  }
+    
+}
+
+/*
+monitor ukuran besar sedang
+*/
+@media (min-width: 1200px) and (max-width: 1462px) {
+    .line-item-section-body {
+        overflow-y: scroll;
+        overflow-x: hidden;
+        height:450px;
+    }
+    .col-md-4 {
+      width: 39.33333333%;
+    }
+    .col-md-1 {
+        width: 13.33333333%;
+      }
+      .col-md-2 {
+  width: 15.66666667%;
+    }
+    .transaksi_header_amount {
+    margin-left: 20px;
+    width: 100px;
+  }
+}
+
+
+/* 
+ari prasetiyo
+28-01-2015
+login: agar ukuran form login tidak terlalu besar
+*/
+@media (min-width: 768px) {
+  .modal-dialog {
+    width: 300px;
+    margin: 30px auto;
+  }
+  .modal-content {
+    -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, .5);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, .5);
+  }
+  .modal-sm {
+    width: 300px;
+  }
+}
+
+//wrap text table
+@media (max-width: 768px) { /* use the max to specify at each container level */
+    .specifictd {    
+        width:360px;  /* adjust to desired wrapping */
+        display:table;
+        white-space: pre-wrap; /* css-3 */
+        white-space: -moz-pre-wrap; /* Mozilla, since 1999 */
+        white-space: -pre-wrap; /* Opera 4-6 */
+        white-space: -o-pre-wrap; /* Opera 7 */
+        word-wrap: break-word; /* Internet Explorer 5.5+ */
+    }
+}
+
+
+
+
+
+
