@@ -48,6 +48,7 @@ public class connectDb {
    public void hapusDbMysql(String tabelDb, String setKey){
         try {
             connectDbMysql();
+            
             //System.out.println("x"+tabelDb+"x"+setKey+"x");
             String sql = "delete from "+ tabelDb +" where id = ?";
             PreparedStatement ps = koneksi.prepareStatement(sql);

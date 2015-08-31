@@ -72,131 +72,163 @@ $(document).ready(function() {
     });
     // windows function difungsi untuk dipagil dari luar document function
     //master_pelamar_save
-    $("#form-ari").validate(
-        {
-        rules: {
-            nama_ari:{
-                required: true,
-                minlength:3
-            },
-            nama_ibu:{
-                required: true,
-                minlength:3
-            },
-            no_tlpn_ari : {
-                required: true,
-                digits: true,
-                minlength:9,
-                maxlength:12
-            },
-            jabatan_ari : {
-                required: true
-            },
-            tempat_lahir_ari:{
-                required: true
-            },
-            tanggal_lahir_ari:{
-                required: true
-            },
-            kewarganegaraan_ari:{
-                required: true
-            },
-            no_ktp_ari:{
-                required: true,
-                digits: true,
-                minlength:10,
-                maxlength:30
-            },
-             email_ari : {
-                required: true,
-                email: true
-            },
-            alamat_ari:{
-                required: true
-            }
+    validationUI();
+    function validationUI(){
+        $("#form-ari").validate(
+            {
+            rules: {
+                nama_ari:{
+                    required: true,
+                    minlength:3,
+                    maxlength:50
+                },
+                nama_ibu:{
+                    required: true,
+                    minlength:3,
+                    maxlength:12
+                },
+                no_tlpn_ari : {
+                    required: true,
+                    digits: true,
+                    minlength:9,
+                    maxlength:12
+                },
+                jabatan_ari : {
+                    required: true
+                },
+                tempat_lahir_ari:{
+                    required: true,
+                    maxlength:30
+                },
+                tanggal_lahir_ari:{
+                    required: true,
+                    maxlength:15
+                },
+                kewarganegaraan_ari:{
+                    required: true,
+                    maxlength:30
+                },
+                no_ktp_ari:{
+                    required: true,
+                    digits: true,
+                    minlength:10,
+                    maxlength:30
+                },
+                   no_sim_ari:{
+                    digits: true,
+                    maxlength:30
+                },
+                 email_ari : {
+                    required: true,
+                    email: true,
+                    maxlength:50
+                },
+                alamat_ari:{
+                    required: true
+                },
+                kode_pos_ari:{
+                    digits: true,
+                    maxlength:7
+                }
 
-            /*
-            tgl: {
-                indonesianDate:true
-            },
-            umur: {
-                digits: true,
-                range: [0, 100]
-            },
-            situs: {
-                url: true
-            },
-            pass2: {
-                equalTo: "#pass1"
-            }*/
-        },
-        messages: {
-             nama_ari:{
-                required: "Nama harus diisi",
-                minlength:"Minimal 3 huruf"
-            },
-            nama_ibu:{
-                required: "Nama harus diisi",
-                minlength:"Minimal 3 huruf"
-            },
-            agama_ari :{
-                required: "Agama harus diisi"
-                
-            },
-             no_tlpn_ari : {
-                required: "Harus diisi",
-                digits: "Harus angka",
-                minlength:"Minimal 9 digit",
-                maxlength:"Max 12 digit"
-            },
-            jabatan_ari :{
-                required: "Jabatan harus diisi"
-            },
-            tempat_lahir_ari:{
-                required: "Tempat lahir harus diisi"
-            },
-            tanggal_lahir_ari:{
-                required: "Tanggal lahir harus diisi"
-            },
-             kewarganegaraan_ari:{
-                required: "kewarganegaraan lahir harus diisi"
-            },
-            no_ktp_ari:{
-                required: "Harus diisi",
-                digits: "Harus angka",
-                minlength:"Minimal 10 digit",
-                maxlength:"Max 30 digit"
-            },
-            email_ari : {
-                required: "Harus diisi",
-                email: "Format email salah"
-            },
-            alamat_ari:{
-                required: "Alamat harus diisi"
-            }
 
-            /*
-            email: {
-                required: "Alamat email harus diisi",
-                email: "Format email tidak valid"
+                /*
+                tgl: {
+                    indonesianDate:true
+                },
+                umur: {
+                    digits: true,
+                    range: [0, 100]
+                },
+                situs: {
+                    url: true
+                },
+                pass2: {
+                    equalTo: "#pass1"
+                }*/
             },
-            pass2: {
-                equalTo: "Password tidak sama"
-            }
-            */
-        },
+            messages: {
+                 nama_ari:{
+                    required: "Nama harus diisi",
+                    minlength:"Minimal 3 huruf",
+                    maxlength:"Max 50 karakter"
+                },
+                nama_ibu:{
+                    required: "harus diisi",
+                    minlength:"Minimal 3 huruf",
+                    maxlength:"Max 50 karakter"
+                },
+                agama_ari :{
+                    required: "Agama harus diisi"
 
-        highlight: function(element) {
-            $(element).closest('.padding_left').addClass('padding_left_error');
-            // 0 = status tidak bisa di save proses ajax 
-            // 1 = status bisa di save
-            $("div#status_save").text("0");
-        },
-        unhighlight: function(element) {
-            $(element).closest('.padding_left').removeClass('padding_left_error');
-            $("div#status_save").text("1");
-        }
-    } );
+                },
+                 no_tlpn_ari : {
+                    required: "Harus diisi",
+                    digits: "Harus angka",
+                    minlength:"Minimal 9 digit",
+                    maxlength:"Max 12 digit"
+                },
+                jabatan_ari :{
+                    required: "Jabatan harus diisi"
+                },
+                tempat_lahir_ari:{
+                    required: "Tempat lahir harus diisi",
+                    maxlength:"Max 30 karakter"
+                },
+                tanggal_lahir_ari:{
+                    required: "Tanggal lahir harus diisi",
+                    maxlength:"Max 15 digit"
+                },
+                 kewarganegaraan_ari:{
+                    required: "kewarganegaraan lahir harus diisi",
+                    maxlength:"Max 50 digit"
+                },
+                no_ktp_ari:{
+                    required: "Harus diisi",
+                    digits: "Harus angka",
+                    minlength:"Minimal 10 digit",
+                    maxlength:"Max 30 digit"
+                },
+                  no_sim_ari:{
+                    digits: "Harus angka",
+                    maxlength:"Max 30 digit"
+                },
+                email_ari : {
+                    required: "Harus diisi",
+                    email: "Format email salah",
+                    maxlength:"Max 50 karakter"
+                },
+                alamat_ari:{
+                    required: "Alamat harus diisi"
+                },
+                kode_pos_ari:{
+                    digits: "Harus angka",
+                    maxlength:"Max 7 digit"
+                }
+
+                /*
+                email: {
+                    required: "Alamat email harus diisi",
+                    email: "Format email tidak valid"
+                },
+                pass2: {
+                    equalTo: "Password tidak sama"
+                }
+                */
+            },
+
+            highlight: function(element) {
+                $(element).closest('.padding_left').addClass('padding_left_error');
+                // 0 = status tidak bisa di save proses ajax 
+                // 1 = status bisa di save
+                $("div#status_save").text("0");
+            },
+            unhighlight: function(element) {
+                $(element).closest('.padding_left').removeClass('padding_left_error');
+                $("div#status_save").text("1");
+            }
+        } );
+    }
      /*
      * ===================================================================
      * @returns {undefined}
@@ -324,6 +356,8 @@ $(document).ready(function() {
      * save data pelamar
      */
     $("#pelamar_save").on("click", function(e){
+        //trigger validation
+        $("#form-ari").submit(); 
         // window.action_save = function dari master_pelamar_action.js
         action_save();
         //function declaration on master_pelamar_validation.js

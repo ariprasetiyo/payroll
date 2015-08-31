@@ -253,7 +253,7 @@
             
             <!-- /.navbar-collapse -->
         </nav>
-
+        <!--
         <div id="gb">
         <div class="gbtab" onclick="showHideGB()"> </div>
         <div class="gbcontent">
@@ -318,6 +318,7 @@
             </div>
         </div>
         </div>
+        -->
         <script type="text/javascript">
         var gb = document.getElementById("gb");
         gb.style.right = (30-gb.offsetWidth).toString() + "px";

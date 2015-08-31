@@ -33,6 +33,183 @@ $(document).ready(function() {
             alert('error');
         }
     });
+    $.validator.addMethod("valueNotEquals", function(value, element, arg){
+        return arg !== value;
+       }, "Value must not equal arg.");
+     function validationUIIzinCuti(){
+        $("#form-ari").validate(
+            {
+            rules: {
+                jum_izin_cuti:{
+                    required: true,
+                    minlength:1,
+                    maxlength:3,
+                    valueNotEquals: "0"
+                },
+                 ket_izin_cuti:{
+                    required: true,
+                    minlength:3,
+                    maxlength:300
+                },
+                tanggal_lahir_ari1:{
+                    required: true,
+                    maxlength:15
+                },
+                tanggal_lahir_ari2:{
+                    required: true,
+                    maxlength:15
+                }
+            },
+            messages: {
+                jum_izin_cuti:{
+                    required: "harus diisi",
+                    minlength:"Minimal 1 digit",
+                    maxlength:"Max 3 digit",
+                    valueNotEquals: "jumlah cuti 0"
+                },
+                 ket_izin_cuti:{
+                    required: "harus diisi",
+                    minlength:"Minimal 3 karakter",
+                    maxlength:"Max 300 karakter"
+                },
+                tanggal_lahir_ari1:{
+                    required: "harus diisi",
+                    maxlength:"Max 15 karakter"
+                },
+                tanggal_lahir_ari2:{
+                    required: "harus diisi",
+                    maxlength:"Max 15 karakter"
+                }
+            },
+            highlight: function(element) {
+                
+                $(element).closest('.padding_left').addClass('padding_left_error');
+                // 0 = status tidak bisa di save proses ajax 
+                // 1 = status bisa di save
+                $("div#status_save").text("0");              
+            },
+            unhighlight: function(element) {
+                $(element).closest('.padding_left').removeClass('padding_left_error');
+                $("div#status_save").text("1");  
+            }
+        } );
+    }
+        function validationUIIzinSakit(){
+        $("#form-ari").validate(
+            {
+            rules: {
+                jum_izin_sakit:{
+                    required: true,
+                    minlength:1,
+                    maxlength:3,
+                    valueNotEquals: "0"
+                },
+                 ket_izin_sakit:{
+                    required: true,
+                    minlength:3,
+                    maxlength:300
+                },
+                tgl_izin_sakit_mulai:{
+                    required: true,
+                    maxlength:15
+                },
+                tgl_izin_sakit_selesai:{
+                    required: true,
+                    maxlength:15
+                }
+            },
+            messages: {
+                jum_izin_sakit:{
+                    required: "harus diisi",
+                    minlength:"Minimal 1 digit",
+                    maxlength:"Max 3 digit",
+                    valueNotEquals: "jumlah cuti 0"
+                },
+                 ket_izin_sakit:{
+                    required: "harus diisi",
+                    minlength:"Minimal 3 karakter",
+                    maxlength:"Max 300 karakter"
+                },
+                tgl_izin_sakit_mulai:{
+                    required: "harus diisi",
+                    maxlength:"Max 15 karakter"
+                },
+                tgl_izin_sakit_selesai:{
+                    required: "harus diisi",
+                    maxlength:"Max 15 karakter"
+                }
+            },
+            highlight: function(element) {
+                
+                $(element).closest('.padding_left').addClass('padding_left_error');
+                // 0 = status tidak bisa di save proses ajax 
+                // 1 = status bisa di save
+                $("div#status_save").text("0");              
+            },
+            unhighlight: function(element) {
+                $(element).closest('.padding_left').removeClass('padding_left_error');
+                $("div#status_save").text("1");  
+            }
+        } );
+    }
+    function validationUILembur(){
+        $("#form-ari").validate(
+            {
+            rules: {
+                jum_lembur:{
+                    required: true,
+                    minlength:1,
+                    maxlength:3,
+                    valueNotEquals: "0"
+                },
+                 ket_form_lembur:{
+                    required: true,
+                    minlength:3,
+                    maxlength:300
+                },
+                tgl_lembur_mulai:{
+                    required: true,
+                    maxlength:15
+                },
+                tgl_lembur_selsai:{
+                    required: true,
+                    maxlength:15
+                }
+            },
+            messages: {
+                jum_lembur:{
+                    required: "harus diisi",
+                    minlength:"Minimal 1 digit",
+                    maxlength:"Max 3 digit",
+                    valueNotEquals: "tidak boleh 0"
+                },
+                 ket_form_lembur:{
+                    required: "harus diisi",
+                    minlength:"Minimal 3 karakter",
+                    maxlength:"Max 300 karakter"
+                },
+                tgl_lembur_mulai:{
+                    required: "harus diisi",
+                    maxlength:"Max 15 karakter"
+                },
+                tgl_lembur_selsai:{
+                    required: "harus diisi",
+                    maxlength:"Max 15 karakter"
+                }
+            },
+            highlight: function(element) {
+                
+                $(element).closest('.padding_left').addClass('padding_left_error');
+                // 0 = status tidak bisa di save proses ajax 
+                // 1 = status bisa di save
+                $("div#status_save").text("0");              
+            },
+            unhighlight: function(element) {
+                $(element).closest('.padding_left').removeClass('padding_left_error');
+                $("div#status_save").text("1");  
+            }
+        } );
+    }
     //pencarian karyawan untuk izin cuti
     $('#search_select_karyawan').on("select2:select", function (e) { 
         var id      = $('#search_select_karyawan').val();
@@ -223,6 +400,8 @@ $(document).ready(function() {
      * save data pelamar
      */
     $("#pelamar_save").on("click", function(e){
+        //trigger validation
+        
         // window.action_save = function dari master_pelamar_action.js
         action_save();
          var tab_home = $("#home_detection").attr("class");
@@ -231,44 +410,59 @@ $(document).ready(function() {
          var id_kar,ref_code, jab, tglA, tglB, jenisIzinCuti, ket, katLembur, jum, user;
          var sta = $("#status_edit").html();
          if (tab_home === 'active'){
-             id_kar = $("select#search_select_karyawan").val();
-             jab = $("input#jabatan_ari_izin_cuti").val();
-             jenisIzinCuti = $("select#jenis_izin_cuti_ari").val();
-             jum = $("input#jum_izin_cuti").val();
-             tglA = $("input#tgl_cuti_mulai").val();
-             tglB = $("input#tgl_cuti_selesai").val();
-             ket = $("textarea#ket_izin_cuti").val();
-             user           = $("b#usernya").text();
-             ref_code = $("input#ref_izin_cuti").val();
-             var dataString = "id_kar="+ id_kar+"&jab="+jab+"&jenisIzinCuti="
-                     +jenisIzinCuti+"&jum="+jum+"&tglA="+tglA+"&tglB="+tglB+"&ket="+ket+"&jenis_presensi=0"+"&usernya="+user+"&ref_code="+ ref_code ;
-             save_data("&sta="+sta, dataString);
+                 id_kar = $("select#search_select_karyawan").val();
+                if (id_kar !== "-"){
+                    jab = $("input#jabatan_ari_izin_cuti").val();
+                    jenisIzinCuti = $("select#jenis_izin_cuti_ari").val();
+                    jum = $("input#jum_izin_cuti").val();
+                    tglA = $("input#tgl_cuti_mulai").val();
+                    tglB = $("input#tgl_cuti_selesai").val();
+                    ket = $("textarea#ket_izin_cuti").val();
+                    user           = $("b#usernya").text();
+                    ref_code = $("input#ref_izin_cuti").val();
+                    var dataString = "id_kar="+ id_kar+"&jab="+jab+"&jenisIzinCuti="
+                            +jenisIzinCuti+"&jum="+jum+"&tglA="+tglA+"&tglB="+tglB+"&ket="+ket+"&jenis_presensi=0"+"&usernya="+user+"&ref_code="+ ref_code ;
+                    save_data("&sta="+sta, dataString);
+                }
+                else {
+                    $("#ajaxResponseError").html("Id karyawan tidak ada");
+                }
          }
          else if (tab_izin_sakit === 'active'){
              id_kar = $("select#search_select_karyawan_sakit").val();
-             jab = $("input#jabatan_ari_izin_sakit").val();
-             jum = $("input#jum_izin_sakit").val();
-             tglA = $("input#tgl_izin_sakit_mulai").val();
-             tglB = $("input#tgl_izin_sakit_selesai").val();
-             ket = $("textarea#ket_izin_sakit").val();
-             ref_code = $("input#ref_code_izin_sakit").val();
-             user           = $("b#usernya").text();
-             var dataString = "id_kar="+ id_kar+"&jab="+jab+"&jum="+jum+"&tglA="+tglA+"&tglB="+tglB+"&ket="+ket+"&jenis_presensi=1"+"&usernya="+user +"&ref_code="+ ref_code ;
-             save_data("&sta="+sta, dataString);
+             if (id_kar !== "-"){
+                jab = $("input#jabatan_ari_izin_sakit").val();
+                jum = $("input#jum_izin_sakit").val();
+                tglA = $("input#tgl_izin_sakit_mulai").val();
+                tglB = $("input#tgl_izin_sakit_selesai").val();
+                ket = $("textarea#ket_izin_sakit").val();
+                ref_code = $("input#ref_code_izin_sakit").val();
+                user           = $("b#usernya").text();
+                var dataString = "id_kar="+ id_kar+"&jab="+jab+"&jum="+jum+"&tglA="+tglA+"&tglB="+tglB+"&ket="+ket+"&jenis_presensi=1"+"&usernya="+user +"&ref_code="+ ref_code ;
+                save_data("&sta="+sta, dataString);
+                }
+            else {
+                  $("#ajaxResponseError").html("Id karyawan tidak ada");
+              }
          }
          else if (tab_izin_lembur === 'active'){
              id_kar = $("select#search_select_karyawan_lembur").val();
-             jab = $("input#jabatan_ari_lembur").val();
-             jum = $("input#jum_lembur").val();
-             katLembur = $("select#katagori_form_lembur").val();
-             tglA = $("input#tgl_lembur_mulai").val();
-             tglB = $("input#tgl_lembur_selsai").val();
-             ket = $("textarea#ket_form_lembur").val();
-             user           = $("b#usernya").text();
-             ref_code = $("input#ref_code_form_lembur").val();
-             var dataString = "id_kar="+ id_kar+"&jab="+jab+"&katLembur="
-                     +katLembur+"&jum="+jum+"&tglA="+tglA+"&tglB="+tglB+"&ket="+ket +"&jenis_presensi=2"+"&usernya="+user+"&ref_code="+ ref_code ;
-             save_data("&sta="+sta, dataString);
+             if (id_kar !== "-"){
+                jab = $("input#jabatan_ari_lembur").val();
+                jum = $("input#jum_lembur").val();
+                katLembur = $("select#katagori_form_lembur").val();
+                tglA = $("input#tgl_lembur_mulai").val();
+                tglB = $("input#tgl_lembur_selsai").val();
+                ket = $("textarea#ket_form_lembur").val();
+                user           = $("b#usernya").text();
+                ref_code = $("input#ref_code_form_lembur").val();
+                var dataString = "id_kar="+ id_kar+"&jab="+jab+"&katLembur="
+                        +katLembur+"&jum="+jum+"&tglA="+tglA+"&tglB="+tglB+"&ket="+ket +"&jenis_presensi=2"+"&usernya="+user+"&ref_code="+ ref_code ;
+                save_data("&sta="+sta, dataString);
+             }
+            else {
+                  $("#ajaxResponseError").html("Id karyawan tidak ada");
+              }
          }
         else{
             $("#ajaxResponseError").text("tidak ada pilihan tab " );
@@ -277,6 +471,7 @@ $(document).ready(function() {
         //window.history.pushState(data, "Title", "master_pelamar.ari");
     });
     function save_data(sta, dataString){
+        
             //make the AJAX request, dataType is set to json
             //meaning we are expecting JSON data in response from the server
             $.ajax({
@@ -363,7 +558,6 @@ $(document).ready(function() {
                 url: "presensi_izin_lembur.ari?xcv=01&sta=2",
                 data: "ref_code="+id,
                 //dataType: "json",
-               
                 beforeSend: function() {
                     //function location on all.js
                      alert(id);
@@ -389,7 +583,6 @@ $(document).ready(function() {
                 }
             });       
     }
-    
     /*
     var auto_refresh = setInterval(function () {
             $('#load_tweets').load('record_count.php').fadeIn("slow");
@@ -732,7 +925,6 @@ $(document).ready(function() {
     $("#menu-utama").click(function(e){
            $("#menu-change").toggleClass('nav navbar-left top-nav nav navbar-nav side-nav');
     });
-    
     /*
     $( window ).resize(function() {
         //$( "#log" ).append( "<div>Handler for .resize() called.</div>" );
@@ -740,10 +932,7 @@ $(document).ready(function() {
         
       });
       */
-    
 });
-
-
 /*
  * end
  */

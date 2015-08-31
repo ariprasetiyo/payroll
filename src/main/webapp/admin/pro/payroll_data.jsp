@@ -276,7 +276,7 @@
             
             <!-- /.navbar-collapse -->
         </nav>
-
+        <!--
         <div id="gb">
         <div class="gbtab" onclick="showHideGB()"> </div>
         <div class="gbcontent">
@@ -480,7 +480,7 @@
                                           </div>                                   
                                                         
                                 <div class="text-right">
-                                    <a href="#"  >View Details <i class="fa fa-arrow-circle-right"></i></a>
+                                   <!-- <a href="#"  >View Details <i class="fa fa-arrow-circle-right"></i></a>-->
                                 </div>     
                             
                             </div>

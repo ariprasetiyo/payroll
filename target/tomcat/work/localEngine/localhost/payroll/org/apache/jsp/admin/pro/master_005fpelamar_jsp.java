@@ -268,7 +268,7 @@ static {
       out.write("            \n");
       out.write("            <!-- /.navbar-collapse -->\n");
       out.write("        </nav>\n");
-      out.write("\n");
+      out.write("        <!--\n");
       out.write("        <div id=\"gb\">\n");
       out.write("        <div class=\"gbtab\" onclick=\"showHideGB()\"> </div>\n");
       out.write("        <div class=\"gbcontent\">\n");
@@ -333,6 +333,7 @@ static {
       out.write("            </div>\n");
       out.write("        </div>\n");
       out.write("        </div>\n");
+      out.write("        -->\n");
       out.write("        <script type=\"text/javascript\">\n");
       out.write("        var gb = document.getElementById(\"gb\");\n");
       out.write("        gb.style.right = (30-gb.offsetWidth).toString() + \"px\";\n");
@@ -678,7 +679,7 @@ static {
       out.write("                                          </div>                                   \n");
       out.write("                                                        \n");
       out.write("                                <div class=\"text-right\">\n");
-      out.write("                                    <a href=\"#\">View Details <i class=\"fa fa-arrow-circle-right\"></i></a>\n");
+      out.write("                                    <!-- <a href=\"#\">View Details <i class=\"fa fa-arrow-circle-right\"></i></a> -->\n");
       out.write("                                </div>     \n");
       out.write("                            \n");
       out.write("                            </div>\n");

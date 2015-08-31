@@ -54,8 +54,9 @@
     <!-- <link href="http://cdnjs.cloudflare.com/ajax/libs/select2/4.0.0-beta.3/css/select2.min.css" rel="stylesheet" /> -->
     
     <!-- <link href="css/select2.min.css" rel="stylesheet" /> -->
+    <!-- validation confirmation 
     <link rel="stylesheet" type="text/css" href="css/jquery.confirm.css" />
-    
+    -->
     <style type="text/css">
         #gb{
             position:fixed;
@@ -116,21 +117,11 @@
                  </button>
                 <!-- <a class="navbar-brand" href="index.html">Arprast</a> -->
             </div>
-            
             <!-- Top Menu Items 
                  display mobile nav navbar-nav side-nav = menu di samping
             -->
             <div id="menu" class="collapse navbar-collapse">
             <div id="menu-side" class="navbar-nav side-nav"></div>
-            <!-- tidak digunakan dulu difungsikan untuk ambil menu AJAX low prioritas -->
-            <!-- 
-            <script  type="text/javascript">
-            $.get("master_pelamar.ari?xcv=m", {ambil_data_id:id} ,function(data) {
-                 $("input#ref_code_ari").val(data.topMenu.refCode );
-            });
-            </script>
-            -->
-            
             <ul id="menu-change" class="nav navbar-left top-nav" >
               <!-- 
                 bagian menu
@@ -153,7 +144,6 @@
                      0 = tanpa link / tidak ada sub menu lagi atau tidak ada link lagi
                      1 = dengan link / ada menu lagi 
              -->
-  
             <c:forEach var="mnu" items="${daftarMenu}" varStatus="counter">
                  <c:set var="levelMenu0"  scope="session" value="${fn:substring(mnu.levelMenu, 0, 1)}" />             
                  <c:if test="${levelMenu0 == 1 }">
@@ -272,75 +262,7 @@
             </ul>
             <!-- id=meun -->
             </div>
-            <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
-            
-            <!-- /.navbar-collapse -->
         </nav>
-
-        <div id="gb">
-        <div class="gbtab" onclick="showHideGB()"> </div>
-        <div class="gbcontent">
-              
-                    <ul class="nav">
-                    <li class="active">
-                        <a href="index.html"><i class="fa fa-fw fa-dashboard"></i> Dashboard</a>
-                    </li>
-                    <li>
-                        <a href="charts.html"><i class="fa fa-fw fa-bar-chart-o"></i> Charts</a>
-                    </li>
-                    <li>
-                        <a href="tables.html"><i class="fa fa-fw fa-table"></i> Tables</a>
-                    </li>
-                    <li>
-                        <a href="forms.html"><i class="fa fa-fw fa-edit"></i> Forms</a>
-                    </li>
-                    <li>
-                        <a href="bootstrap-elements.html"><i class="fa fa-fw fa-desktop"></i> Bootstrap Elements</a>
-                    </li>
-                    <li>
-                        <a href="bootstrap-grid.html"><i class="fa fa-fw fa-wrench"></i> Bootstrap Grid</a>
-                    </li>
-                    <li>
-                        <a href="javascript:;" data-toggle="collapse" data-target="#demo"><i class="fa fa-fw fa-arrows-v"></i> Dropdown <i class="fa fa-fw fa-caret-down"></i></a>
-                        <ul id="demo" class="collapse">
-                            <li>
-                                <a href="#">Dropdown Item</a>
-                            </li>
-                            <li>
-                                <a href="#">Dropdown Item</a>
-                            </li>
-                            <li>
-                                <a href="#">Dropdown Item</a>
-                            </li>
-                            <li>
-                                <a href="#">Dropdown Item</a>
-                            </li>
-                            <li>
-                                <a href="#">Dropdown Item</a>
-                            </li>
-                            <li>
-                                <a href="#">Dropdown Item</a>
-                            </li>
-                            <li>
-                                <a href="#">Dropdown Item</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="blank-page.html"><i class="fa fa-fw fa-file"></i> Blank Page</a>
-                    </li>
-                    <li>
-                        <a href="index-rtl.html"><i class="fa fa-fw fa-dashboard"></i> RTL Dashboard</a>
-                    </li>
-                </ul>
-   
-            <div style="text-align:right">
-            <a><font size="1">...</font></a><a href="javascript:showHideGB()">
-            [close]
-            </a>
-            </div>
-        </div>
-        </div>
         <script type="text/javascript">
         var gb = document.getElementById("gb");
         gb.style.right = (30-gb.offsetWidth).toString() + "px";
@@ -365,36 +287,6 @@
                                 <h3 class="panel-title"><i class="fa fa-long-arrow-right fa-fw"></i>Data Izin / Lembur</h3>
                             </div>
                             <div class="panel-body-ari-customize">
-                                
-                               <!--
-                                <div class="col-xs-3 form-input-data-bottom-10" >
-                                        <label >Ref code</label>
-                                </div>                               
-                                <div class="col-xs-8 form-input-data-bottom-10" >
-                                    <input  type="text" name="ref_code" style="width: 100%"  disabled>
-                                </div>                           
-                            
-                                <div class="col-xs-3 form-input-data-bottom-10" >
-                                    <label  >Nama Lengkap</label>
-                                </div>                               
-                                <div class="col-xs-9 form-input-data-bottom-10">
-                                    <input type="text" name="ref_code" style="width: 100%"   disabled>
-                                </div>
-
-                                <div class="col-xs-3 form-input-data-bottom-10">
-                                    <label >Tanggal Lahir</label>
-                                </div>                               
-                                <div class="col-xs-6 form-input-data-bottom-10">
-                                    <input type="text" name="ref_code" style="width: 100%"  disabled>
-                                </div>
-                                
-                                <div class="col-xs-3 form-input-data-bottom-10">
-                                    <label >Tanggal Lahir</label>
-                                </div>                               
-                                <div class="col-xs-7 form-input-data-bottom-10">
-                                    <input type="text" name="ref_code" style="width: 100%"  disabled>
-                                </div>
-                                -->
                                 <div class="form-group" >
                                     <form id="form-ari" >
                                     <div class="panel-body ">
@@ -431,7 +323,7 @@
                                                     <tr>
                                                         <td>Nama & Id Karyawan</td>
                                                         <td colspan="3">
-                                                          <select class="js-data-example-ajaxs" id="search_select_karyawan">
+                                                          <select name="select_validation" class="js-data-example-ajaxs" id="search_select_karyawan">
                                                                 <option value="-" selected="selected" id="select2ValueAriIzin" class="removeSelect2" >-</option>
                                                           </select>
                                                         </td>
@@ -440,7 +332,7 @@
                                                         <td>Jabatan</td>
                                                         <td colspan="3">
                                                             <div class="form-group has-error">   
-                                                                <input id="jabatan_ari_izin_cuti"  type="text" class="col-xs-5 padding_left" disabled>
+                                                                <input id="jabatan_ari_izin_cuti" name="jabatan_ari_izin_cuti" type="text" class="col-xs-5 padding_left" disabled>
                                                             </div>
                                                             <!--<input id="jabatan_ari" name='jabatan_ari' type="text" class="col-xs-12 padding_left">-->
                                                          </td>
@@ -468,25 +360,23 @@
                                                     </tr>
                                                     <tr>
                                                         <td style="width: 90px">Tgl Mulai Cuti</td>
-                                                        <td><input id="tgl_cuti_mulai" name="tanggal_lahir_ari"  type="text" data-date-format="mm/dd/yyyy" class="col-xs-4 datepicker padding_left" ></td>
+                                                        <td><input id="tgl_cuti_mulai" name="tanggal_lahir_ari1"  type="text" data-date-format="mm/dd/yyyy" class="col-xs-4 datepicker padding_left" ></td>
                                                         
                                                     </tr>
                                                     <tr>
                                                         <td style="width: 120px">Tgl Selesai Cuti</td>
-                                                        <td><input id="tgl_cuti_selesai" name="tanggal_lahir_ari"  type="text" data-date-format="mm/dd/yyyy" class="col-xs-4 datepicker padding_left" ></td>
+                                                        <td><input id="tgl_cuti_selesai" name="tanggal_lahir_ari2"  type="text" data-date-format="mm/dd/yyyy" class="col-xs-4 datepicker padding_left" ></td>
                                                     </tr>
                                                     <tr>
                                                         <td>Keterangan</td>
                                                         <td colspan="3">
-                                                            <textarea style="height:50px" id="ket_izin_cuti" name="alamat_ari"  class="col-xs-12 padding_left" ></textarea>
+                                                            <textarea style="height:50px" id="ket_izin_cuti" name="ket_izin_cuti"  class="col-xs-12 padding_left" ></textarea>
                                                         </td>
                                                     </tr>
                                                 </table>
                                                 </div>
                                             </div>
                                         <div role="tabpanel" class="tab-pane" id="izin_sakit">  
-                                           
-                                                
                                                     <table class="table">
                                                     <tr>
                                                         <td class="col-xs-3">Ref Code</td>
@@ -525,23 +415,23 @@
                                                     <tr>
                                                         <td>Jumlah Izin Sakit</td>
                                                         <td >
-                                                            <input id="jum_izin_sakit" name="kode_pos_ari" class="col-xs-1 padding_left">
+                                                            <input id="jum_izin_sakit" name="jum_izin_sakit" class="col-xs-1 padding_left">
                                                         </td>
                                                     </tr>
                                                     
                                                     <tr>
                                                         <td style="width: 90px">Tgl Mulai Izin Sakit</td>
-                                                        <td><input id="tgl_izin_sakit_mulai" name="tanggal_lahir_ari"  type="text" data-date-format="mm/dd/yyyy" class="col-xs-4 datepicker padding_left" ></td>
+                                                        <td><input id="tgl_izin_sakit_mulai" name="tgl_izin_sakit_mulai"  type="text" data-date-format="mm/dd/yyyy" class="col-xs-4 datepicker padding_left" ></td>
                                                     </tr>
                                                     <tr>
                                                         <td style="width: 150px">Tgl Selesai Izin Sakit</td>
-                                                        <td><input id="tgl_izin_sakit_selesai" name="tanggal_lahir_ari"  type="text" data-date-format="mm/dd/yyyy" class="col-xs-4 datepicker padding_left" ></td>
+                                                        <td><input id="tgl_izin_sakit_selesai" name="tgl_izin_sakit_selesai"  type="text" data-date-format="mm/dd/yyyy" class="col-xs-4 datepicker padding_left" ></td>
                                                     </tr>
                                                    
                                                     <tr>
                                                         <td>Keterangan</td>
                                                         <td colspan="3">
-                                                            <textarea style="height:50px" id="ket_izin_sakit" name="alamat_ari"  class="col-xs-12 padding_left" ></textarea>
+                                                            <textarea style="height:50px" id="ket_izin_sakit" name="ket_izin_sakit"  class="col-xs-12 padding_left" ></textarea>
                                                         </td>
                                                     </tr>
                                                 </table>
@@ -597,29 +487,25 @@
                                                     <tr>
                                                         <td>Jumlah Lembur</td>
                                                         <td >
-                                                            <input id="jum_lembur" name="kode_pos_ari" class="col-xs-1 padding_left">
+                                                            <input id="jum_lembur" name="jum_lembur" class="col-xs-1 padding_left">
                                                         </td>
                                                         
                                                     </tr>
-                                                    
                                                     <tr>
                                                         <td style="width: 90px">Tgl Mulai Lembur</td>
-                                                        <td><input id="tgl_lembur_mulai" name="tanggal_lahir_ari"  type="text" data-date-format="mm/dd/yyyy" class="col-xs-4 datepicker padding_left" ></td>
+                                                        <td><input id="tgl_lembur_mulai" name="tgl_lembur_mulai"  type="text" data-date-format="mm/dd/yyyy" class="col-xs-4 datepicker padding_left" ></td>
                                                     </tr>
                                                     <tr>
                                                         <td style="width: 120px">Tgl Selesai Lembur</td>
-                                                        <td><input id="tgl_lembur_selsai" name="tanggal_lahir_ari"  type="text" data-date-format="mm/dd/yyyy" class="col-xs-4 datepicker padding_left" ></td>
+                                                        <td><input id="tgl_lembur_selsai" name="tgl_lembur_selsai"  type="text" data-date-format="mm/dd/yyyy" class="col-xs-4 datepicker padding_left" ></td>
                                                     </tr>
-                                                   
                                                     <tr>
                                                         <td>Keterangan</td>
                                                         <td colspan="3">
-                                                            <textarea style="height:50px" id="ket_form_lembur" name="alamat_ari"  class="col-xs-12 padding_left" ></textarea>
+                                                            <textarea style="height:50px" id="ket_form_lembur" name="ket_form_lembur"  class="col-xs-12 padding_left" ></textarea>
                                                         </td>
                                                     </tr>
-                                               
                                                 </table>
-                                               
                                           </div>
                                         </div>
                                     </div>
@@ -737,7 +623,7 @@
                                           </div>                                   
                                                         
                                 <div class="text-right">
-                                    <a href="#">View Details <i class="fa fa-arrow-circle-right"></i></a>
+                                    <!-- <a href="#">View Details <i class="fa fa-arrow-circle-right"></i></a>-->
                                 </div>     
                             
                             </div>
@@ -776,7 +662,6 @@
      <script src="js/jquery.js"></script>
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
-    
     <!--
     <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.13.0/jquery.validate.min.js"></script>
     -->
@@ -793,13 +678,13 @@
      <script src="js/all_loading.js" type="text/javascript"></script>
      <script type="text/javascript" src="js/jquery.plugin.js"></script> 
      <script type="text/javascript" src="js/jquery.datepick.js"></script>
-    <!-- http://tutorialzine.com/2010/12/better-confirm-box-jquery-css3/ -->
-    <script type="text/javascript" src="js/jquery.confirm.js"></script>
+    <!-- http://tutorialzine.com/2010/12/better-confirm-box-jquery-css3/ 
+    digunakan sebagai validation confirmation
+    <script type="text/javascript" src="js/jquery.confirm.js"></script> -->
      <!-- oprek sendiri -->
       <!--<script src="js/master_pelamar_validation.js" type="text/javascript"></script>-->
     <!--<script src="ajax/master_pelamar_save.js" type="text/javascript"></script> -->
     <!-- <script src="js/select2.js" type="text/javascript"></script> -->
-    
     <!--http://www.position-absolute.com/creation/print/jquery.printPage.js -->
     <script src="js/jquery.printPage.js" type="text/javascript"></script>
     <!-- 
@@ -809,7 +694,6 @@
     <script src="js/select2.js" type="text/javascript"></script>
     <!--<script src="http://cdnjs.cloudflare.com/ajax/libs/select2/4.0.0/js/select2.min.js"></script>-->
     <script src="js/master_presensi.js" type="text/javascript"></script>
-     
     <!-- http://wenzhixin.net.cn/p/bootstrap-table/docs/examples.html -->
     <!-- <script src="js/bootstrap-table.js" type="text/javascript"></script>  -->
 </body>
