@@ -12,7 +12,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>SB Admin - Bootstrap Admin Template</title>
+    <title>Data Gaji</title>
     
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.css" rel="stylesheet">
@@ -23,9 +23,9 @@
     <!-- Morris Charts CSS -->
    <!--<link href="css/plugins/morris.css" rel="stylesheet"> -->
    
-    <!-- Custom Fonts -->
+    <!-- Custom Fonts
     <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css"> 
-    
+     -->
     <!--<link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css" rel="stylesheet" type="text/css" -->
     <link href="css/jquery-ui.css" rel="stylesheet" type="text/css">
     
@@ -34,9 +34,6 @@
     
      <!-- tabel css -->
     <!-- <link href="css/bootstrap-table.css" rel="stylesheet"> -->
-    
-    <!-- text editor -->
-     <link href="css/editor.css" rel="stylesheet">
      
     <!-- date range  http://eternicode.github.io/bootstrap-datepicker/? -->
     <link rel="stylesheet" type="text/css" href="css/jquery.datepick.css"> 
@@ -114,7 +111,6 @@
                  </button>
                 <!-- <a class="navbar-brand" href="index.html">Arprast</a> -->
             </div>
-            
             <!-- Top Menu Items 
                  display mobile nav navbar-nav side-nav = menu di samping
             -->
@@ -128,9 +124,7 @@
             });
             </script>
             -->
-            
             <ul id="menu-change" class="nav navbar-left top-nav" >
-                  
             <!-- 
                 bagian menu
                 keterangan tentang tag
@@ -152,7 +146,6 @@
                      0 = tanpa link / tidak ada sub menu lagi atau tidak ada link lagi
                      1 = dengan link / ada menu lagi 
              -->
-  
             <c:forEach var="mnu" items="${daftarMenu}" varStatus="counter">
                  <c:set var="levelMenu0"  scope="session" value="${fn:substring(mnu.levelMenu, 0, 1)}" />             
                  <c:if test="${levelMenu0 == 1 }">
@@ -246,8 +239,6 @@
                     </c:choose>
                  </c:if>
             </c:forEach>
-            
-          
             </ul>
             </ul>
             <ul class="nav navbar-right top-nav">
@@ -273,80 +264,8 @@
             <!-- id=meun -->
             </div>
             <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
-            
             <!-- /.navbar-collapse -->
         </nav>
-        <!--
-        <div id="gb">
-        <div class="gbtab" onclick="showHideGB()"> </div>
-        <div class="gbcontent">
-              
-                    <ul class="nav">
-                    <li class="active">
-                        <a href="index.html"><i class="fa fa-fw fa-dashboard"></i> Dashboard</a>
-                    </li>
-                    <li>
-                        <a href="charts.html"><i class="fa fa-fw fa-bar-chart-o"></i> Charts</a>
-                    </li>
-                    <li>
-                        <a href="tables.html"><i class="fa fa-fw fa-table"></i> Tables</a>
-                    </li>
-                    <li>
-                        <a href="forms.html"><i class="fa fa-fw fa-edit"></i> Forms</a>
-                    </li>
-                    <li>
-                        <a href="bootstrap-elements.html"><i class="fa fa-fw fa-desktop"></i> Bootstrap Elements</a>
-                    </li>
-                    <li>
-                        <a href="bootstrap-grid.html"><i class="fa fa-fw fa-wrench"></i> Bootstrap Grid</a>
-                    </li>
-                    <li>
-                        <a href="javascript:;" data-toggle="collapse" data-target="#demo"><i class="fa fa-fw fa-arrows-v"></i> Dropdown <i class="fa fa-fw fa-caret-down"></i></a>
-                        <ul id="demo" class="collapse">
-                            <li>
-                                <a href="#">Dropdown Item</a>
-                            </li>
-                            <li>
-                                <a href="#">Dropdown Item</a>
-                            </li>
-                            <li>
-                                <a href="#">Dropdown Item</a>
-                            </li>
-                            <li>
-                                <a href="#">Dropdown Item</a>
-                            </li>
-                            <li>
-                                <a href="#">Dropdown Item</a>
-                            </li>
-                            <li>
-                                <a href="#">Dropdown Item</a>
-                            </li>
-                            <li>
-                                <a href="#">Dropdown Item</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="blank-page.html"><i class="fa fa-fw fa-file"></i> Blank Page</a>
-                    </li>
-                    <li>
-                        <a href="index-rtl.html"><i class="fa fa-fw fa-dashboard"></i> RTL Dashboard</a>
-                    </li>
-                </ul>
-   
-            <div style="text-align:right">
-            <a><font size="1">...</font></a><a href="javascript:showHideGB()">
-            [close]
-            </a>
-            </div>
-        </div>
-        </div>
-        <script type="text/javascript">
-        var gb = document.getElementById("gb");
-        gb.style.right = (30-gb.offsetWidth).toString() + "px";
-        </script>
-        <div id="page-wrapper">
-            <div class="container-fluid">
                 <!-- Page Heading -->          
                 <div class="row paling_atas">
                     <div class="col-lg-16">
@@ -356,14 +275,10 @@
                     </div>
                 </div>
                 <!-- /.row -->
-                
                 <!-- data input karyawan -->
                 <div class="row">                   
-
                     <div class="col-lg-12">
-                        <div class="panel panel-default">
-                            
- 
+                        <div class="panel panel-default"> 
                             <div class="panel-body">
                                           <!-- tombol filter -->
                                         <div class="col-sm-12" >
@@ -491,10 +406,6 @@
                 </div>
                 <!-- /.row -->
             </div>
-            <!-- /.container-fluid -->
-        </div>
-        <!-- /#page-wrapper -->
-    </div>
     <!-- /#wrapper -->   
 <!-- chart --><!--
     <script src="js/plugins/morris/raphael.min.js"></script>
@@ -523,13 +434,10 @@
     <!--
     <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.13.0/jquery.validate.min.js"></script>
     -->
-    <script src="js/jquery.validate.min.js"></script>
-    
+    <script src="js/jquery.validate.min.js"></script>    
     <!-- text editor
     https://mindmup.github.io/bootstrap-wysiwyg/
     -->
-     <script src="js/editor.js"></script>
-    
      <!-- date range
      http://eternicode.github.io/bootstrap-datepicker/?
      -->

@@ -12,7 +12,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>SB Admin - Bootstrap Admin Template</title>
+    <title>Absensi</title>
     
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.css" rel="stylesheet">
@@ -23,9 +23,9 @@
     <!-- Morris Charts CSS -->
    <!--<link href="css/plugins/morris.css" rel="stylesheet"> -->
    
-    <!-- Custom Fonts -->
+    <!-- Custom Fonts 
     <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css"> 
-    
+    -->
     <!--<link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css" rel="stylesheet" type="text/css" -->
     <link href="css/jquery-ui.css" rel="stylesheet" type="text/css">
     
@@ -34,10 +34,7 @@
     
      <!-- tabel css -->
     <!-- <link href="css/bootstrap-table.css" rel="stylesheet"> -->
-    
-    <!-- text editor -->
-     <link href="css/editor.css" rel="stylesheet">
-     
+
     <!-- date range  http://eternicode.github.io/bootstrap-datepicker/? -->
     <link rel="stylesheet" type="text/css" href="css/jquery.datepick.css"> 
 
@@ -666,12 +663,6 @@
     <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.13.0/jquery.validate.min.js"></script>
     -->
     <script src="js/jquery.validate.min.js"></script>
-    
-    <!-- text editor
-    https://mindmup.github.io/bootstrap-wysiwyg/
-    -->
-     <script src="js/editor.js"></script>
-    
      <!-- date range
      http://eternicode.github.io/bootstrap-datepicker/?
      -->

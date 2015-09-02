@@ -20,16 +20,13 @@ import java.util.logging.Logger;
 
 
 public class SHA1 {
-    
     public String Enkripsi (String password){
         try {
             MessageDigest hash = MessageDigest.getInstance("SHA1");
             DigestOutputStream dOut = new DigestOutputStream( new ByteArrayOutputStream(), hash);
             dOut.write(encrypt(password));
             dOut.close();
-    
             return  new String(dOut.getMessageDigest().digest());
-            
         } catch (NoSuchAlgorithmException ex) {
             Logger.getLogger(SHA1.class.getName()).log(Level.SEVERE, null, ex);
             new com.ari.prasetiyo.sistem.loggerError(SHA1.class.getName(), ex);
@@ -44,7 +41,6 @@ public class SHA1 {
         return null;
     }
     private static byte[] encrypt(String x) {
-        
         try {
             java.security.MessageDigest d = null;
             d = java.security.MessageDigest.getInstance("SHA-1");
@@ -56,6 +52,5 @@ public class SHA1 {
             new com.ari.prasetiyo.sistem.loggerError(SHA1.class.getName(), ex);
         }
         return null;
-      
     }
 }

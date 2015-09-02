@@ -264,15 +264,6 @@ $(document).ready(function() {
     });
     $("a#pelamar_print_data").printPage();
     $("a#pelamar_print").printPage();
-    /*
-    * about text editor alamat tinggal
-    */
-    $("#txtEditor").Editor(); 
-    /*
-    * about text editor alamat asal
-    */
-    $("#almtAsal").Editor();
-   
    /*
     * source http://jsfiddle.net/techrevolt/Fp4sJ/
     * input hanya angka saja

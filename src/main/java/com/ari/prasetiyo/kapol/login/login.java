@@ -9,7 +9,6 @@ package com.ari.prasetiyo.kapol.login;
  *
  * @author arprast
  */
-
 import com.ari.prasetiyo.dao.daoLogin;
 import com.ari.prasetiyo.sistem.MD5;
 import com.ari.prasetiyo.sistem.SHA1;
@@ -41,14 +40,12 @@ public class login extends HttpServlet {
             String userNameWeb, passwordWeb;
             userNameWeb = req.getParameter("username");
             passwordWeb = req.getParameter("password");
-            
             /*
                 MD5 dan SHA1
             */
             MD5 md5 = new MD5();
             SHA1 sha1 = new SHA1();
             passwordWeb = md5.Enkripsi(sha1.Enkripsi(passwordWeb));
-            
             //System.out.println(userNameWeb +" dan " + passwordWeb);
             /*
                 angka 1 adalah username benar dan password benar
@@ -56,38 +53,31 @@ public class login extends HttpServlet {
             */
             List<domainLogin> list;
             list = dao.tampilLogin(userNameWeb, passwordWeb, 1);
-            
+            System.out.println(passwordWeb);
             if (dao.getLoginTrue()){
                 validateLogin(list, userNameWeb, dao, req, res);
             }
             else{
-                
                 list.clear();
                 list = dao.tampilLogin(userNameWeb, passwordWeb, 0);
-
-                /*
-                   jika user dan passowrd salah
-                */
+                /*jika user dan passowrd salah*/
                 for(domainLogin m: list ) {
                     countLogin = m.getCountLogin();
-
-                    /*
-                    0 = update count login
-                    */
+                    /* 0 = update count login */
                     dao.updateLogin(m, countLogin, userNameWeb, 0);
                     break ;    
                 }
+                System.out.println("hallo");
                 kirimDataAjax(res,"User/password salah",0);
-
                 //req.setAttribute("pesanLogin", "user atau passowrd salah");
                 //req.getRequestDispatcher("index.jsp").forward(req, res);
             }
          }
          catch(Exception ex){
+              Logger.getLogger(login.class.getName()).log(Level.SEVERE, null, ex);
              new com.ari.prasetiyo.sistem.loggerError(login.class.getName(), ex);
          }
     }
-     
      /*
         validate count login, user aktiv, user level and create session
         statusAktiv = 1 adalah aktiv
@@ -98,18 +88,14 @@ public class login extends HttpServlet {
          String userNameWeb , daoLogin dao, HttpServletRequest req, HttpServletResponse res){
          try {
          for(domainLogin m: list ) {
-             
                 String userName, password;               
                 int statusAktiv, userLevel;
-                
                 userName = m.getUserName();
                 password = m.getPassowrd();
                 countLogin = m.getCountLogin();
                 statusAktiv = m.getStatusAktiv();
                 userLevel = m.getUserLevel();
-                
                 if (countLogin > 6)  {
-                    
                     //req.setAttribute("pesanLogin", "account has been lock");
                     //dao.updateLogin(m, countLogin, userNameWeb, 0);
                     //req.getRequestDispatcher("index.jsp").forward(req, res);
@@ -129,7 +115,7 @@ public class login extends HttpServlet {
                     break;
                 }
                 else {
-                    
+                    System.out.println("hallo5"+ userName);
                     /*
                     aktivitas session
                     */
@@ -138,7 +124,6 @@ public class login extends HttpServlet {
                     kirimDataAjax(res,"admin/ari.ari", 1);
                     break;
                 }
-                     
             }
          } 
          catch (Exception ex) {
@@ -146,7 +131,6 @@ public class login extends HttpServlet {
             new com.ari.prasetiyo.sistem.loggerError(login.class.getName(), ex);
         }
      }
-     
      /*
      masukMana = 1 => redirect
      masukMana = 0 => cuma send data saja
@@ -164,7 +148,6 @@ public class login extends HttpServlet {
              {"success":true,"items":{"userName":"hallo","countLogin":0,"statusAktiv":0,"userLevel":0}}
               */
              PrintWriter out  = res.getWriter();
-            
              res.setContentType("text/html");
              res.setHeader("Cache-control", "no-cache, no-store");
              res.setHeader("Pragma", "no-cache");
@@ -176,7 +159,6 @@ public class login extends HttpServlet {
              if (masukMana == 1){
                 res.setHeader("REQUIRES_AUTH", "1");
              }
-              
              Gson gson = new Gson();
              JsonObject myObj = new JsonObject();
              com.ari.prasetiyo.domain.domainLogin error = new com.ari.prasetiyo.domain.domainLogin();
@@ -189,7 +171,6 @@ public class login extends HttpServlet {
              else {
                  myObj.addProperty("success", true);
              }
-             
              myObj.add("infoError", errorInfo);
              out.println(myObj.toString());
              //System.out.println(myObj.toString());

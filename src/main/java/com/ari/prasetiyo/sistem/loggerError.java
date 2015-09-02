@@ -125,6 +125,7 @@ public class loggerError{
     }
     
     private void createFolder(){
+        
          File directory = new File("arprastLogger");
             if (!directory.exists()) {
                     if (directory.mkdirs()) {

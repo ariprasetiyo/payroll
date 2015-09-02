@@ -243,9 +243,7 @@ padding-bottom: 3px;
 padding-top: 3px;
 }
 
-/*
- validation jika error
-*/
+/*validation jika error*/
 .error { 
     font-size:small; 
     color:#C02929; 
@@ -255,10 +253,7 @@ padding-top: 3px;
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.075) inset, 0px 0px 8px rgba(239, 53, 13, 0.6);
     border-color: #D41515;
 }
-
-/*
-input
-*/
+/*input*/
 input {
   display: block;
   width: 10%;
@@ -309,11 +304,7 @@ input[disabled], input[readonly] {
   background-color: #eee;
   opacity: 1;
 }
-
-
-/*
-bagian sales
-*/
+/*bagian sales*/
 .header-name {
   position: absolute;
 }
@@ -342,78 +333,16 @@ bagian sales
   border-top-left-radius: 3px;
   border-top-right-radius: 3px;
 }
-
-.transaksi_header_no{
-    width: 25px;
-    
-}
-.transaksi_header_item{
-      margin-left: 10px;
-}
-.transaksi_header_qty{
-      margin-left: 2px;
-      width: 25px;
-}
-.transaksi_header_discount{
-      margin-left: 5px;
-      width: 100px;
-}
-.transaksi_header_price{
-      margin-left: 0px;
-      width: 100px;
-}
-.transaksi_header_amount{
-      margin-left: 0px;
-      
-}
-
-.transaksi_no{
-    width: 25px;
-    
-}
-.transaksi_item{
-      margin-left: 0px;
-      
-}
-.text_input_width_100_persen{
-        width: 100%;
- }
-
-.transaksi_qty{
-      margin-left: 2px;
-      width: 25px;
-}
-.transaksi_discount{
-      margin-left: 5px;
-      width: 100px;
-}
-.transaksi_price{
-      margin-left: 0px;
-      width: 100px;
-}
-.transaksi_amount{
-      margin-left: 0px;
-      width: 125px;
-}
 .select2-container--default {
   width: 400px;
 }
-
-/*
-text editor
-*/
+/*text editor*/
  #editor {overflow:scroll; max-height:300px; }
- 
- /*
- tab 
- */
+/*tab */
  .panel-body {
     padding: 5px 10px;
 }
- 
-/*
-CSS pada tombol CRUD
-*/
+ /*CSS pada tombol CRUD*/
 .panel-body-ari-customize {
   padding: 0px;
 }
@@ -448,10 +377,8 @@ input {
 .btn {
     padding: 0px 12px;
 }
-
 /* hape */
 @media (min-width: 200px) and (max-width: 549px) {
-    
     .line-item-section-body {
         overflow-y: scroll;
         overflow-x: hidden;
@@ -491,47 +418,6 @@ input {
     /* color: #333; */
     background-color: #fff;
   }
-  .line-item-section-header {
-  
-        font-size: 11px;
-    }
-    
-   /*
-    sales
-    */
-    .transaksi_header_item {
-        margin-left: 10px;
-        width: 70px;
-      }
-    .transaksi_header_price {
-        margin-left: 10px;
-        width: 50px;
-      }
-    .transaksi_header_qty {
-        margin-left: 2px;
-        width: 0px;
-      }
-      .transaksi_header_discount {
-        margin-left: 0px;
-        width: 50px;
-      }
-    .transaksi_header_amount {
-        margin-left: 2px;
-        width: 68px;
-     }
-    .transaksi_price {
-        margin-left: 0px;
-        width: 50px;
-      }
-  .transaksi_discount {
-        margin-left: 5px;
-        width: 50px;
-      }
-
-    .transaksi_amount {
-        margin-left: 0px;
-        width: 50px;
-      }
 }
 /* tampilan seperti hp */
 @media (min-width: 550px) and (max-width: 800px) {
@@ -557,27 +443,6 @@ input {
       margin-top: -50px;
       border-bottom: 0px solid #eee;
     }
-    .transaksi_header_discount {
-        margin-left: 5px;
-        width: 70px;
-      }
-      .transaksi_header_amount {
-        margin-left: 0px;
-        width: 80px;
-      }
-    .transaksi_discount {
-    margin-left: 5px;
-    width: 100px;
-  }
-  .transaksi_price {
-    margin-left: 0px;
-    width: 80px;
-  }
-    .transaksi_amount {
-    margin-left: 0px;
-    width: 75px;
-  }
-  
 }
 @media (min-width: 800px) and (max-width: 991px) {
     .line-item-section-body {
@@ -599,31 +464,6 @@ input {
       margin-top: 0px;
       border-bottom: 0px solid #eee;
     }
-    .transaksi_header_discount {
-        margin-left: 5px;
-        width: 70px;
-      }
-      .transaksi_header_amount {
-        margin-left: 0px;
-        width: 80px;
-      }
-    .transaksi_discount {
-    margin-left: 5px;
-    width: 100px;
-  }
-  .transaksi_price {
-    margin-left: 0px;
-    width: 80px;
-  }
-    .transaksi_amount {
-    margin-left: 0px;
-    width: 75px;
-  }
-  .transaksi_header_amount {
-    margin-left: 20px;
-    width: 75px;
-  }
-  
 }
 
 /*

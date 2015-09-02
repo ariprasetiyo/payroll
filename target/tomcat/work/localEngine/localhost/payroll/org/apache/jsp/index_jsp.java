@@ -65,15 +65,16 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
         
       out.write("\n");
       out.write("    <head>\n");
-      out.write("        <title>TODO supply a title</title>\n");
+      out.write("        <title>Login</title>\n");
       out.write("        <meta charset=\"UTF-8\">\n");
       out.write("        <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n");
       out.write("        <link href=\"admin/css/bootstrap.css\" rel=\"stylesheet\"> \n");
       out.write("        <link href=\"admin/css/main.css\" rel=\"stylesheet\">\n");
       out.write("        <!--\n");
       out.write("        <link href=\"http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css\" rel=\"stylesheet\" type=\"text/css\" />\n");
-      out.write("        -->\n");
+      out.write("        --\n");
       out.write("        <link href=\"admin/css/jquery-ui.css\" rel=\"stylesheet\" type=\"text/css\">\n");
+      out.write("        -->\n");
       out.write("    </head>\n");
       out.write("    <body >\n");
       out.write("    <div id=\"login-overlay\" class=\"modal-dialog\">\n");

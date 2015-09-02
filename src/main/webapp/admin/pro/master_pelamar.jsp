@@ -11,36 +11,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-
-    <title>SB Admin - Bootstrap Admin Template</title>
-    
+    <title>Master Pelamar</title>
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.css" rel="stylesheet">
-
     <!-- Custom CSS -->
     <link href="css/sb-admin.css" rel="stylesheet">
-
     <!-- Morris Charts CSS -->
    <!--<link href="css/plugins/morris.css" rel="stylesheet"> -->
-   
-    <!-- Custom Fonts -->
+    <!-- Custom Fonts difungsikan untuk text editor saja-->
     <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css"> 
-    
-    <!--<link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css" rel="stylesheet" type="text/css" -->
+    <!--Bepengaruh pada datepicker
+    <link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css" rel="stylesheet" type="text/css" 
+     -->
     <link href="css/jquery-ui.css" rel="stylesheet" type="text/css">
-    
     <!-- customize css -->
     <link href="css/main.css" rel="stylesheet">
-    
      <!-- tabel css -->
     <!-- <link href="css/bootstrap-table.css" rel="stylesheet"> -->
-    
     <!-- text editor -->
      <link href="css/editor.css" rel="stylesheet">
-     
     <!-- date range  http://eternicode.github.io/bootstrap-datepicker/? -->
     <link rel="stylesheet" type="text/css" href="css/jquery.datepick.css"> 
-
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -707,13 +698,13 @@
     <script src="js/plugins/morris/morris-data.js"></script>
     -->
     <script src="js/jquery.min.js"></script>
-    <script src="js/bootstrap-datepicker.min.js"></script>
+
     
-    <!--
+    <!-- berpengaruh pada date picker
     <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
-    -->
+     -->
     <script src="js/jquery-ui.min.js"></script>
-    
+   
     <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 
     <!--
@@ -740,6 +731,7 @@
      -->
      <script src="js/all_loading.js" type="text/javascript"></script>
      <script type="text/javascript" src="js/jquery.plugin.js"></script> 
+     <!--    <script src="js/bootstrap-datepicker.min.js"></script> -->
      <script type="text/javascript" src="js/jquery.datepick.js"></script>
     <!-- http://tutorialzine.com/2010/12/better-confirm-box-jquery-css3/ -->
     <script type="text/javascript" src="js/jquery.confirm.js"></script>

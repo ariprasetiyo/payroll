@@ -36,9 +36,7 @@ public class daoLogin {
             ResultSet rs = null;
             
             if (loginSalahOrBenar == 0 ){
-                /*
-                    jika user benar dan passowrd salah
-                */
+                /*jika user benar dan passowrd salah*/
                 sql = "select username, count_false_login "
                     + "from sys_user where username =? ";
                 ps = dbMysql.koneksi.prepareStatement(sql);
@@ -46,41 +44,32 @@ public class daoLogin {
                 rs = ps.executeQuery();
             }
             else if (loginSalahOrBenar == 1){
-                
-                /*
-                    jika user dan password benar
-                */
+                 System.out.println("hallo2");
+                /* jika user dan password benar*/
                 sql = "select username, password, status_aktiv, count_false_login,level_user "
                     + "from sys_user where username =? and password =? ";
                 ps = dbMysql.koneksi.prepareStatement(sql);
                 ps.setString(1, username);
                 ps.setString(2, password);
                 rs = ps.executeQuery();
-                
             }
-            
             ArrayList<domainLogin> listHasil = new  ArrayList<domainLogin>();
-            
-            while(rs.next()){                
+            while(rs.next()){
+                System.out.println("hallo3");
                 domainLogin p = konversiResultSet(rs, loginSalahOrBenar);
                 listHasil.add(p);
             }
             dbMysql.disconnectDbMysql();
-            
             return listHasil;
         } catch (SQLException ex) {
-            /*
-                    Logika login
-                    untuk aktivitas di login.java
-            */
+            /*Logika login
+             untuk aktivitas di login.java*/
             this.LoginTrue = false;
             Logger.getLogger(daoLogin.class.getName()).log(Level.SEVERE, null, ex);
             new com.ari.prasetiyo.sistem.loggerError(daoLogin.class.getName(), ex);
         }
-        
-        /*
-            Logika login
-            untuk aktivitas di login.java
+        /*Logika login
+          untuk aktivitas di login.java
         */
         this.LoginTrue = false;
         return null;
@@ -88,33 +77,27 @@ public class daoLogin {
     private domainLogin konversiResultSet(ResultSet rs, int loginSalahOrBenar) {
         try {
             domainLogin p = new domainLogin();
-            
+            System.out.println("hallo4."+p.getUserName());
             if (loginSalahOrBenar == 0 ){
-                /*
-                    jika user benar dan passd salah
-                */
+                /*jika user benar dan passd salah*/
                 p.setUserName(rs.getString("username"));
                 p.setCountLogin(rs.getInt("count_false_login"));
-                /*
-                    Logika login
-                    untuk aktivitas di login.java
+                /*Logika login
+                  untuk aktivitas di login.java
                 */
+                System.out.println("hallo4A"+p.getUserName());
                 this.LoginTrue = false;
             }
             else if (loginSalahOrBenar == 1){  
-                /*
-                    jika user dan password benar
-                */
+                System.out.println("hallo4B"+p.getUserName());
+                /*jika user dan password benar*/
                 p.setUserName(rs.getString("username"));
                 p.setPassword(rs.getString("password"));
-
                 p.setStatusAktiv(rs.getInt("status_aktiv"));
                 p.setCountLogin(rs.getInt("count_false_login"));
                 p.setUserLevel(rs.getInt("level_user"));
-                
-                /*
-                    Logika login
-                    untuk aktivitas di login.java
+                /*Logika login
+                  untuk aktivitas di login.java
                 */
                 this.LoginTrue = true;
             }
@@ -125,16 +108,12 @@ public class daoLogin {
         }
         return null;
     }
-    
     /*
     aktivitas untuk update data dibawah saat proses login:
-    
     pilih = 0 => save or update count login
     pilih = 1 => save or update status aktiv
-    
     status_aktive = 0 => non aktive
     status_aktive = 1 => aktive
-    
     count_false_login = 6 => lock login
     */
     public void updateLogin(domainLogin m, int countLogin, String syarat, int pilih){
@@ -169,7 +148,6 @@ public class daoLogin {
                 ps.executeUpdate();
                 */
             }
-
             dbMysql.disconnectDbMysql();
         } catch (SQLException ex) {
             Logger.getLogger(daoLogin.class.getName()).log(Level.SEVERE, null, ex);
