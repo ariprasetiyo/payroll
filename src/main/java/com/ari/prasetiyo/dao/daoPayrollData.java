@@ -5,14 +5,12 @@
  */
 package com.ari.prasetiyo.dao;
 
-import com.ari.prasetiyo.domain.domainMasterKaryawan;
 import com.ari.prasetiyo.domain.domainPayrollData;
 import com.ari.prasetiyo.domain.domainPayrollData_printSlipGaji;
 import com.ari.prasetiyo.sistem.connectDb;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -83,6 +81,7 @@ public class daoPayrollData {
     }
     /*
     ambil data new gaji
+    ambil data berdasarkan jumlah karyawan dan pembuatan absensi pada bulan bersangkutan
     */
     public ArrayList<domainPayrollData> tampilDataNew(int limitBawah, int limitAtas,  com.ari.prasetiyo.domain.domainMasterPelamarAll dMA ){
         connectDb dbMysql = new connectDb();
@@ -103,6 +102,7 @@ public class daoPayrollData {
                     "on A.id_karyawan = mkd.id_karyawan " +
                     "and  CONVERT(DATE_FORMAT(A.tanggal_update,'%Y-%m-%d-%H:%i:00'),datetime) =  CONVERT(DATE_FORMAT(mkd.tanggal_update,'%Y-%m-%d-%H:%i:00'),datetime)  " +
                     "inner join  payroll_master_karyawan mk on   mkd.id_karyawan = mk.id_karyawan  " +
+                    "inner join presensi_absensi pa on date_format(pa.tanggal_dibuat, '%Y-%m') = date_format(now(), '%Y-%m')  and  mkd.id_karyawan = pa.id_karyawan "+
                     "order by mk.no desc  limit ?,?"  ;
 
                 ps = dbMysql.koneksi.prepareStatement(sql);
@@ -208,6 +208,7 @@ public class daoPayrollData {
                     }
                 }
                 //filter tanpa periode
+                //filter data hanya data bulan sekarang
                 else {
                     sql =  "  SELECT  dg.id_gaji, mkd.id_karyawan  , mkd.sts_pegawai as status_pegawai, mk.nama, mk.status_karyawan, mkd.jabatan,  " +
                             "mkd.area, mkd.gaji,  " +
@@ -222,7 +223,7 @@ public class daoPayrollData {
                             "and  CONVERT(DATE_FORMAT(A.tanggal_update,'%Y-%m-%d-%H:%i:00'),datetime) =  CONVERT(DATE_FORMAT(mkd.tanggal_update,'%Y-%m-%d-%H:%i:00'),datetime)   " +
                             "inner join  payroll_master_karyawan mk on   mkd.id_karyawan = mk.id_karyawan  " +
                             "inner join data_gaji dg on mk.id_karyawan = dg.id_karyawan " +
-                            "where date_format(tanggal_created, '%Y-%m') = date_format(now(), '%Y-%m')" +
+                            "where date_format(dg.tanggal_created, '%Y-%m') = date_format(now(), '%Y-%m')" +
                             "and mkd.id_karyawan like ? " +
                             "and mkd.sts_pegawai like ? " +
                             "and mkd.jabatan like ? " +
@@ -255,7 +256,8 @@ public class daoPayrollData {
                         "INNER JOIN payroll_master_karyawan_detail mkd  " +
                         "on A.id_karyawan = mkd.id_karyawan  " +
                         "and  CONVERT(DATE_FORMAT(A.tanggal_update,'%Y-%m-%d-%H:%i:00'),datetime) =  CONVERT(DATE_FORMAT(mkd.tanggal_update,'%Y-%m-%d-%H:%i:00'),datetime)   " +
-                        "inner join  payroll_master_karyawan mk on   mkd.id_karyawan = mk.id_karyawan   inner join data_gaji dg on mk.id_karyawan = dg.id_karyawan " +
+                        "inner join  payroll_master_karyawan mk on   mkd.id_karyawan = mk.id_karyawan   inner join data_gaji dg on mk.id_karyawan = dg.id_karyawan "+
+                        "and date_format(dg.tanggal_created, '%Y-%m') = date_format(now(), '%Y-%m') " +
                         "order by dg.no desc  limit ?,?  ;";
                 ps = dbMysql.koneksi.prepareStatement(sql);
                 ps.setInt(1, limitBawah);

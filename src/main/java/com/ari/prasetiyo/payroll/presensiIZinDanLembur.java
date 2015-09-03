@@ -529,7 +529,8 @@ public class presensiIZinDanLembur extends HttpServlet {
             }
              // jumlah row seluruh data
             else{
-                sql = "select ( count(id_cuti) + (select count(id_lembur) as id from presensi_lembur) ) as id from presensi_izin";
+                sql = " select ( count(id_cuti) + (select count(id_lembur) as id from presensi_lembur where  date_format(tanggal_dibuat, '%Y-%m') = date_format(now(), '%Y-%m')) ) as id from presensi_izin " +
+                      "  where  date_format(tanggal_dibuat, '%Y-%m') = date_format(now(), '%Y-%m')";
             }
             jumlahRow = daoQueryAll.jumlahRow(sql, dMA, "filterPresensi");
             // kirim data dalam format JSON

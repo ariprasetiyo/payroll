@@ -287,9 +287,10 @@ public class payrollData extends HttpServlet {
                         "and mkd.area like ? and mkd.sts_pegawai like ?     " ;
                 jumlahRow = daoQueryAll.jumlahRow(sql, dMA,"filterKaryawan");
             }
-            //data new absensi
+            //data new gaji
             else if(dMA.getfPilihan().equals("22")){
-                 sql = "select count(id_karyawan) as id from payroll_master_karyawan";
+                 sql = "select count(mk.id_karyawan) as id from payroll_master_karyawan mk "+
+                       "inner join presensi_absensi pa on date_format(pa.tanggal_dibuat, '%Y-%m') = date_format(now(), '%Y-%m')  and  mk.id_karyawan = pa.id_karyawan ";
                  jumlahRow = daoQueryAll.jumlahRow(sql, dMA,"filterPresensiAbsensi");
                  element = gson.toJsonTree(dao.tampilDataNew(LimitBawah, LimitAtas, dMA), new TypeToken<List<domainPresensiAbsensi>>() {}.getType());           
             }

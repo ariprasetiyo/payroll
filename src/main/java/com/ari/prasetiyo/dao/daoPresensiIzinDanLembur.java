@@ -635,7 +635,9 @@ public class daoPresensiIzinDanLembur {
                     "end as ket, " +
                     "tanggal_dibuat " +
                     "from presensi_lembur  " +
-                    ") b inner join payroll_master_karyawan mk on b.id_karyawann = mk.id_karyawan order by b.tanggal_dibuatt desc limit ?,?";
+                    ") b inner join payroll_master_karyawan mk on b.id_karyawann = mk.id_karyawan "+
+                    " and date_format(b.tanggal_dibuatt, '%Y-%m') = date_format(now(), '%Y-%m') "+
+                    "order by b.tanggal_dibuatt desc limit ?,?";
                 ps = dbMysql.koneksi.prepareStatement(sql);
                 ps.setInt(1, limitBawah);
                 ps.setInt(2, limitAtas);
