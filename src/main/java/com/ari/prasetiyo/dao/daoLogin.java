@@ -34,7 +34,6 @@ public class daoLogin {
             String sql = null;
             PreparedStatement ps;
             ResultSet rs = null;
-            
             if (loginSalahOrBenar == 0 ){
                 /*jika user benar dan passowrd salah*/
                 sql = "select username, count_false_login "
@@ -44,7 +43,6 @@ public class daoLogin {
                 rs = ps.executeQuery();
             }
             else if (loginSalahOrBenar == 1){
-                 System.out.println("hallo2");
                 /* jika user dan password benar*/
                 sql = "select username, password, status_aktiv, count_false_login,level_user "
                     + "from sys_user where username =? and password =? ";
@@ -55,7 +53,6 @@ public class daoLogin {
             }
             ArrayList<domainLogin> listHasil = new  ArrayList<domainLogin>();
             while(rs.next()){
-                System.out.println("hallo3");
                 domainLogin p = konversiResultSet(rs, loginSalahOrBenar);
                 listHasil.add(p);
             }
@@ -77,7 +74,6 @@ public class daoLogin {
     private domainLogin konversiResultSet(ResultSet rs, int loginSalahOrBenar) {
         try {
             domainLogin p = new domainLogin();
-            System.out.println("hallo4."+p.getUserName());
             if (loginSalahOrBenar == 0 ){
                 /*jika user benar dan passd salah*/
                 p.setUserName(rs.getString("username"));
@@ -85,11 +81,9 @@ public class daoLogin {
                 /*Logika login
                   untuk aktivitas di login.java
                 */
-                System.out.println("hallo4A"+p.getUserName());
                 this.LoginTrue = false;
             }
             else if (loginSalahOrBenar == 1){  
-                System.out.println("hallo4B"+p.getUserName());
                 /*jika user dan password benar*/
                 p.setUserName(rs.getString("username"));
                 p.setPassword(rs.getString("password"));
@@ -120,13 +114,10 @@ public class daoLogin {
         try {
             connectDb dbMysql = new connectDb();
             dbMysql.connectDbMysql();
-            
             String query;
-            
             if (pilih == 0 ){
                 query = "update  sys_user set count_false_login =?  where username =?";
                 PreparedStatement ps = dbMysql.koneksi.prepareStatement(query);
-                
                 ps.setInt(1, countLogin + 1 );
                 ps.setString(2,syarat);
                 ps.executeUpdate();

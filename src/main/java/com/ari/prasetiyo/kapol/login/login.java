@@ -27,7 +27,7 @@ import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 
 /**
- *
+ *http://software.endy.muhardin.com/java/symmetric-encryption-dengan-java/
  * @author arprast
  */
 public class login extends HttpServlet {
@@ -53,7 +53,6 @@ public class login extends HttpServlet {
             */
             List<domainLogin> list;
             list = dao.tampilLogin(userNameWeb, passwordWeb, 1);
-            System.out.println(passwordWeb);
             if (dao.getLoginTrue()){
                 validateLogin(list, userNameWeb, dao, req, res);
             }
@@ -67,7 +66,6 @@ public class login extends HttpServlet {
                     dao.updateLogin(m, countLogin, userNameWeb, 0);
                     break ;    
                 }
-                System.out.println("hallo");
                 kirimDataAjax(res,"User/password salah",0);
                 //req.setAttribute("pesanLogin", "user atau passowrd salah");
                 //req.getRequestDispatcher("index.jsp").forward(req, res);
@@ -115,7 +113,6 @@ public class login extends HttpServlet {
                     break;
                 }
                 else {
-                    System.out.println("hallo5"+ userName);
                     /*
                     aktivitas session
                     */
