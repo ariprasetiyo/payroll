@@ -23,7 +23,7 @@ public class connectDb {
             String namaClassDriver  = "com.mysql.jdbc.Driver";
             String jdbcUrl = "jdbc:mysql://localhost/payroll";
             String username = "root";
-            String password = "C0b4dib4c4";
+            String password = "isi_sendiri";
             
             Class.forName(namaClassDriver).newInstance();
             koneksi = DriverManager.getConnection(jdbcUrl, username, password);
